@@ -35,31 +35,31 @@
             theme: {
                 extend: {
                     colors: {
-                        // ブルー系（信頼性・専門性）
+                        // 白黒基調（グレースケール）
                         'primary': {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
+                            50: '#fafafa',
+                            100: '#f5f5f5',
+                            200: '#e5e5e5',
+                            300: '#d4d4d4',
+                            400: '#a3a3a3',
+                            500: '#737373',
+                            600: '#525252',
+                            700: '#404040',
+                            800: '#262626',
+                            900: '#171717',
                         },
-                        // オレンジ系（温かみ・親しみやすさ）
+                        // ゴールド/イエロー系（希望・明るさ）
                         'accent': {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            200: '#fed7aa',
-                            300: '#fdba74',
-                            400: '#fb923c',
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
-                            800: '#9a3412',
-                            900: '#7c2d12',
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            300: '#fde047',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            800: '#854d0e',
+                            900: '#713f12',
                         }
                     },
                     fontFamily: {
@@ -132,7 +132,7 @@
 
         /* カウントダウンのスタイル */
         .countdown-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #171717 0%, #404040 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -155,12 +155,12 @@
         }
 
         .station-list::-webkit-scrollbar-thumb {
-            background: #3b82f6;
+            background: #262626;
             border-radius: 10px;
         }
 
         .station-list::-webkit-scrollbar-thumb:hover {
-            background: #2563eb;
+            background: #171717;
         }
     </style>
 </head>
@@ -183,13 +183,13 @@
 
                 <!-- デスクトップメニュー -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#about" class="nav-link text-gray-700 hover:text-primary-600 transition">番組について</a>
-                    <a href="#cast" class="nav-link text-gray-700 hover:text-primary-600 transition">出演者</a>
-                    <a href="#broadcast" class="nav-link text-gray-700 hover:text-primary-600 transition">放送情報</a>
-                    <a href="#pillars" class="nav-link text-gray-700 hover:text-primary-600 transition">5つの柱</a>
-                    <a href="#schedule" class="nav-link text-gray-700 hover:text-primary-600 transition">放送予定</a>
-                    <a href="#stations" class="nav-link text-gray-700 hover:text-primary-600 transition">放送局</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary-600 transition">お問い合わせ</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-accent-600 transition">番組について</a>
+                    <a href="#cast" class="nav-link text-gray-700 hover:text-accent-600 transition">出演者</a>
+                    <a href="#broadcast" class="nav-link text-gray-700 hover:text-accent-600 transition">放送情報</a>
+                    <a href="#pillars" class="nav-link text-gray-700 hover:text-accent-600 transition">5つの柱</a>
+                    <a href="#schedule" class="nav-link text-gray-700 hover:text-accent-600 transition">放送予定</a>
+                    <a href="#stations" class="nav-link text-gray-700 hover:text-accent-600 transition">放送局</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-accent-600 transition">お問い合わせ</a>
                 </div>
 
                 <!-- モバイルメニューボタン -->
@@ -216,23 +216,20 @@
     </nav>
 
     <!-- ヒーローセクション -->
-    <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50">
-        <!-- 背景パターン -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23000000" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-size: 60px 60px;"></div>
+    <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <!-- 背景画像 -->
+        <div class="absolute inset-0">
+            <img src="https://plus.unsplash.com/premium_photo-1733266825325-1254e9fff8bc?w=1920&q=80&auto=format&fit=crop"
+                 alt="建築イメージ"
+                 class="w-full h-full object-cover"
+                 loading="eager"
+                 decoding="async">
+            <!-- オーバーレイ（白ベースで明るく - 可読性向上） -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/85 via-white/75 to-white/90"></div>
         </div>
 
         <div class="container mx-auto px-4 relative z-10">
             <div class="text-center">
-                <!-- 扉のアニメーション -->
-                <div class="door-container inline-block mb-8">
-                    <div class="door w-32 h-40 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg shadow-2xl flex items-center justify-center animate__animated animate__fadeIn">
-                        <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                </div>
-
                 <!-- タイトル（ロゴ画像） -->
                 <h1 class="mb-0 animate__animated animate__fadeInUp">
                     <img src="/assets/images/logo.png"
@@ -272,10 +269,10 @@
 
                 <!-- 放送情報 -->
                 <div class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl p-8 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-3s">
-                    <p class="text-2xl font-bold text-primary-800 mb-4">2026年1月4日(日) START!</p>
+                    <p class="text-2xl font-bold text-gray-900 mb-4">2026年1月4日(日) START!</p>
                     <p class="text-lg text-gray-700 mb-2">毎週日曜 11:00〜11:55</p>
                     <p class="text-gray-600">ミュージックバード / Spotify / YouTube</p>
-                    <p class="text-sm text-primary-600 mt-4">Presents: 一般社団法人 大阪府建築士事務所協会</p>
+                    <p class="text-sm text-accent-600 mt-4">Presents: 一般社団法人 大阪府建築士事務所協会</p>
                 </div>
 
                 <!-- スクロール誘導 -->
@@ -292,7 +289,7 @@
     <section id="about" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">番組について</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">番組について</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto"></div>
             </div>
 
@@ -309,7 +306,7 @@
 
                 <!-- テキスト -->
                 <div data-aos="fade-left">
-                    <h3 class="text-2xl font-bold text-primary-700 mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">
                         建築の最前線にいる「人」の声を届ける
                     </h3>
                     <p class="text-gray-700 mb-4 leading-relaxed">
@@ -323,8 +320,8 @@
                     </p>
 
                     <!-- ミッション -->
-                    <div class="bg-primary-50 rounded-xl p-6">
-                        <h4 class="text-lg font-bold text-primary-800 mb-3">私たちのミッション</h4>
+                    <div class="bg-gray-50 rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-gray-900 mb-3">私たちのミッション</h4>
                         <ul class="space-y-2 text-gray-700">
                             <li class="flex items-start">
                                 <svg class="w-5 h-5 text-accent-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -355,14 +352,14 @@
     <section id="cast" class="py-20 bg-gradient-to-b from-gray-50 to-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">出演者紹介</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">出演者紹介</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- MC -->
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow" data-aos="flip-left">
-                    <div class="h-64 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center">
+                    <div class="h-64 bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center">
                         <svg class="w-32 h-32 text-white opacity-50" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
                         </svg>
@@ -415,24 +412,24 @@
     </section>
 
     <!-- 放送情報 -->
-    <section id="broadcast" class="py-20 bg-primary-50" data-aos="fade-up">
+    <section id="broadcast" class="py-20 bg-gray-50" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">放送情報・視聴方法</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">放送情報・視聴方法</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto"></div>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- ラジオ -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2" data-aos="zoom-in">
-                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                         </svg>
                     </div>
                     <h3 class="text-xl font-bold text-center text-gray-800 mb-4">ラジオ放送</h3>
                     <div class="text-center mb-6">
-                        <p class="text-2xl font-bold text-primary-600 mb-2">毎週日曜</p>
+                        <p class="text-2xl font-bold text-gray-800 mb-2">毎週日曜</p>
                         <p class="text-xl text-gray-700">11:00〜11:55</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl p-4">
@@ -482,10 +479,10 @@
 
             <!-- 番組構成 -->
             <div class="mt-16 bg-white rounded-2xl shadow-lg p-8" data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-primary-800 mb-6 text-center">番組構成（55分）</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">番組構成（55分）</h3>
                 <div class="grid md:grid-cols-4 gap-4">
-                    <div class="text-center p-4 bg-primary-50 rounded-xl">
-                        <p class="text-3xl font-bold text-primary-600 mb-2">3分</p>
+                    <div class="text-center p-4 bg-gray-100 rounded-xl">
+                        <p class="text-3xl font-bold text-gray-800 mb-2">3分</p>
                         <p class="text-sm font-bold text-gray-700">オープニング</p>
                         <p class="text-xs text-gray-600 mt-1">ゲスト紹介・テーマ</p>
                     </div>
@@ -513,7 +510,7 @@
     <section id="pillars" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">番組の5つの柱</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">番組の5つの柱</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     建築業界の「今」と「未来」を5つの視点から多角的に描き出します
@@ -593,7 +590,7 @@
     <section id="schedule" class="py-20 bg-gradient-to-b from-gray-50 to-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">今後の放送予定</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">今後の放送予定</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600">豪華ゲストと共に建築の世界を探求します</p>
             </div>
@@ -602,13 +599,13 @@
             <div class="max-w-4xl mx-auto">
                 <div class="relative">
                     <!-- 縦線 -->
-                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-200"></div>
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200"></div>
 
                     <!-- 予定項目 -->
                     <div class="space-y-8">
                         <!-- 項目1 -->
                         <div class="relative flex items-start" data-aos="fade-right">
-                            <div class="absolute left-8 w-4 h-4 bg-primary-600 rounded-full -translate-x-1/2 mt-1.5"></div>
+                            <div class="absolute left-8 w-4 h-4 bg-gray-800 rounded-full -translate-x-1/2 mt-1.5"></div>
                             <div class="ml-20 bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow">
                                 <div class="text-sm text-accent-600 font-bold mb-2">第1回〜第4回</div>
                                 <h3 class="text-lg font-bold text-gray-800 mb-2">建築最前線：建築士の役割を紐解く</h3>
@@ -616,9 +613,9 @@
                                     国土交通省、大阪府建築士事務所協会会長、日本建築士事務所協会連合会会長など、業界のキーパーソンが登場
                                 </p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">行政</span>
-                                    <span class="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">建築士</span>
-                                    <span class="text-xs bg-primary-100 text-primary-700 px-2 py-1 rounded">協会</span>
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">行政</span>
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">建築士</span>
+                                    <span class="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">協会</span>
                                 </div>
                             </div>
                         </div>
@@ -705,10 +702,10 @@
     </section>
 
     <!-- 放送局一覧 -->
-    <section id="stations" class="py-20 bg-primary-50" data-aos="fade-up">
+    <section id="stations" class="py-20 bg-gray-50" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">放送局一覧</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">放送局一覧</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600">ミュージックバード 全国97局のコミュニティFMで放送</p>
             </div>
@@ -717,7 +714,7 @@
             <div class="max-w-2xl mx-auto mb-12">
                 <div class="bg-white rounded-xl shadow-lg p-6">
                     <label class="block text-gray-700 font-bold mb-3">お住まいの地域を選択</label>
-                    <select id="region-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    <select id="region-select" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
                         <option value="">全地域を表示</option>
                         <option value="hokkaido">北海道</option>
                         <option value="tohoku">東北</option>
@@ -735,72 +732,72 @@
             <div class="grid lg:grid-cols-3 gap-6">
                 <!-- 関東エリア -->
                 <div class="bg-white rounded-xl shadow-lg p-6 station-region" data-region="kanto">
-                    <h3 class="text-lg font-bold text-primary-700 mb-4 flex items-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                         </svg>
                         関東エリア
                     </h3>
                     <div class="station-list space-y-2">
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM世田谷（東京都）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• かつしかFM（東京都）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM江戸川（東京都）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• 調布FM（東京都）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• 西東京FM（東京都）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM八王子（東京都）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMサルース（神奈川県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM湘南ナパサ（神奈川県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• レディオ湘南（神奈川県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM浦和（埼玉県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• REDS WAVE（埼玉県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• 市川うららFM（千葉県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM世田谷（東京都）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• かつしかFM（東京都）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM江戸川（東京都）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• 調布FM（東京都）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• 西東京FM（東京都）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM八王子（東京都）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMサルース（神奈川県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM湘南ナパサ（神奈川県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• レディオ湘南（神奈川県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM浦和（埼玉県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• REDS WAVE（埼玉県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• 市川うららFM（千葉県）</div>
                     </div>
                 </div>
 
                 <!-- 近畿エリア -->
                 <div class="bg-white rounded-xl shadow-lg p-6 station-region" data-region="kinki">
-                    <h3 class="text-lg font-bold text-primary-700 mb-4 flex items-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                         </svg>
                         近畿エリア
                     </h3>
                     <div class="station-list space-y-2">
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM千里（大阪府）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMひらかた（大阪府）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM HANAKO（大阪府）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• みのおエフエム（大阪府）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMいたみ（兵庫県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• さくらFM（兵庫県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM宝塚（兵庫県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• ハミングFM宝塚（兵庫県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• 京都三条ラジオカフェ（京都府）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMうじ（京都府）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• ならどっとFM（奈良県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM千里（大阪府）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMひらかた（大阪府）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM HANAKO（大阪府）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• みのおエフエム（大阪府）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMいたみ（兵庫県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• さくらFM（兵庫県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM宝塚（兵庫県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• ハミングFM宝塚（兵庫県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• 京都三条ラジオカフェ（京都府）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMうじ（京都府）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• ならどっとFM（奈良県）</div>
                     </div>
                 </div>
 
                 <!-- その他エリア -->
                 <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-lg font-bold text-primary-700 mb-4 flex items-center">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
                         </svg>
                         その他の主要局
                     </h3>
                     <div class="station-list space-y-2">
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMいるか（北海道）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• ラジオ石巻（宮城県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMぜんこうじ（長野県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• Radio80（岐阜県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• COAST-FM（静岡県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• エフエムななみ（愛知県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMくらしき（岡山県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMちゅーピー（広島県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• COME ON! FM（山口県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM高松（香川県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FM KITAQ（福岡県）</div>
-                        <div class="text-sm text-gray-600 hover:text-primary-600 cursor-pointer">• FMやんばる（沖縄県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMいるか（北海道）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• ラジオ石巻（宮城県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMぜんこうじ（長野県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• Radio80（岐阜県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• COAST-FM（静岡県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• エフエムななみ（愛知県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMくらしき（岡山県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMちゅーピー（広島県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• COME ON! FM（山口県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM高松（香川県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FM KITAQ（福岡県）</div>
+                        <div class="text-sm text-gray-600 hover:text-accent-600 cursor-pointer">• FMやんばる（沖縄県）</div>
                     </div>
                 </div>
             </div>
@@ -815,7 +812,7 @@
     <section id="sponsor" class="py-20 bg-gradient-to-br from-accent-50 to-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">協賛・スポンサー募集</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">協賛・スポンサー募集</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
                     建築業界の未来を共に創る企業様を募集しています
@@ -824,12 +821,12 @@
 
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
-                    <h3 class="text-2xl font-bold text-primary-700 mb-6">協賛のメリット</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">協賛のメリット</h3>
 
                     <div class="grid md:grid-cols-2 gap-6 mb-8">
                         <div class="flex items-start">
-                            <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                 </svg>
                             </div>
@@ -876,7 +873,7 @@
                         </div>
                     </div>
 
-                    <div class="bg-gradient-to-r from-primary-50 to-accent-50 rounded-xl p-6 mb-8">
+                    <div class="bg-gradient-to-r from-gray-50 to-accent-50 rounded-xl p-6 mb-8">
                         <p class="text-center text-gray-700 font-bold">
                             大阪府建築士事務所協会設立50周年記念事業として、
                             <br class="hidden lg:block">
@@ -886,7 +883,7 @@
 
                     <div class="text-center">
                         <p class="text-gray-600 mb-6">協賛に関するお問い合わせはこちらから</p>
-                        <a href="#contact" class="inline-block bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-full font-bold hover:from-primary-700 hover:to-primary-800 transition-all hover:shadow-lg">
+                        <a href="#contact" class="inline-block bg-gradient-to-r from-gray-800 to-gray-900 text-white px-8 py-4 rounded-full font-bold hover:from-gray-900 hover:to-black transition-all hover:shadow-lg">
                             お問い合わせフォームへ
                         </a>
                     </div>
@@ -899,22 +896,22 @@
     <section id="association" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">Presents</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Presents</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto"></div>
             </div>
 
             <div class="max-w-4xl mx-auto">
-                <div class="bg-gradient-to-br from-primary-50 to-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl overflow-hidden">
                     <!-- ヘッダー -->
-                    <div class="bg-gradient-to-r from-primary-600 to-primary-700 p-8 text-white">
+                    <div class="bg-gradient-to-r from-gray-800 to-gray-900 p-8 text-white">
                         <h3 class="text-2xl lg:text-3xl font-bold mb-2">一般社団法人 大阪府建築士事務所協会</h3>
-                        <p class="text-primary-100">設立50周年記念事業</p>
+                        <p class="text-gray-300">設立50周年記念事業</p>
                     </div>
 
                     <!-- コンテンツ -->
                     <div class="p-8 lg:p-12">
                         <div class="mb-8">
-                            <h4 class="text-xl font-bold text-primary-700 mb-4">協会について</h4>
+                            <h4 class="text-xl font-bold text-gray-800 mb-4">協会について</h4>
                             <p class="text-gray-700 leading-relaxed mb-4">
                                 大阪府建築士事務所協会は、建築設計・監理業務の適正な運営と健全な発展を図り、
                                 建築文化の向上と公共の福祉増進に寄与することを目的として活動しています。
@@ -927,9 +924,9 @@
 
                         <!-- 活動内容 -->
                         <div class="grid md:grid-cols-2 gap-6 mb-8">
-                            <div class="bg-white rounded-xl p-6 border border-primary-100">
+                            <div class="bg-white rounded-xl p-6 border border-gray-200">
                                 <h5 class="font-bold text-gray-800 mb-3 flex items-center">
-                                    <svg class="w-5 h-5 text-primary-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="w-5 h-5 text-gray-700 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
                                     主な活動
@@ -961,7 +958,7 @@
                         <!-- リンク -->
                         <div class="text-center">
                             <a href="https://www.oaaf.or.jp/" target="_blank" rel="noopener noreferrer"
-                               class="inline-flex items-center bg-primary-600 text-white px-6 py-3 rounded-full font-bold hover:bg-primary-700 transition">
+                               class="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-full font-bold hover:bg-gray-900 transition">
                                 協会公式サイトへ
                                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -978,7 +975,7 @@
     <section id="contact" class="py-20 bg-gradient-to-b from-gray-50 to-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">お問い合わせ</h2>
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">お問い合わせ</h2>
                 <div class="w-20 h-1 bg-accent-500 mx-auto mb-6"></div>
                 <p class="text-lg text-gray-600">番組へのご意見・ご要望、協賛のお問い合わせなど</p>
             </div>
@@ -993,7 +990,7 @@
                                     お名前 <span class="text-red-500">*</span>
                                 </label>
                                 <input type="text" id="name" name="name" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
                             </div>
 
                             <div>
@@ -1001,7 +998,7 @@
                                     会社名・団体名
                                 </label>
                                 <input type="text" id="company" name="company"
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
                             </div>
                         </div>
 
@@ -1011,7 +1008,7 @@
                                     メールアドレス <span class="text-red-500">*</span>
                                 </label>
                                 <input type="email" id="email" name="email" required
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
                             </div>
 
                             <div>
@@ -1019,7 +1016,7 @@
                                     電話番号
                                 </label>
                                 <input type="tel" id="phone" name="phone"
-                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
                             </div>
                         </div>
 
@@ -1028,7 +1025,7 @@
                                 お問い合わせ種別 <span class="text-red-500">*</span>
                             </label>
                             <select id="subject" name="subject" required
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"
                                 <option value="">選択してください</option>
                                 <option value="sponsor">協賛・スポンサーについて</option>
                                 <option value="guest">ゲスト出演について</option>
@@ -1043,12 +1040,12 @@
                                 お問い合わせ内容 <span class="text-red-500">*</span>
                             </label>
                             <textarea id="message" name="message" rows="6" required
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500"></textarea>
                         </div>
 
                         <div class="text-center">
                             <button type="submit"
-                                    class="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-4 rounded-full font-bold hover:from-primary-700 hover:to-primary-800 transition-all hover:shadow-lg">
+                                    class="bg-gradient-to-r from-gray-800 to-gray-900 text-white px-8 py-4 rounded-full font-bold hover:from-gray-900 hover:to-black transition-all hover:shadow-lg">
                                 送信する
                             </button>
                         </div>
@@ -1059,23 +1056,23 @@
                 <div class="bg-white rounded-2xl shadow-lg p-8">
                     <h3 class="text-xl font-bold text-center text-gray-800 mb-6">公式SNS</h3>
                     <div class="flex justify-center space-x-6">
-                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 transition group">
-                            <svg class="w-6 h-6 text-gray-600 group-hover:text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent-100 transition group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-accent-600" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                             </svg>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 transition group">
-                            <svg class="w-6 h-6 text-gray-600 group-hover:text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent-100 transition group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-accent-600" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
                             </svg>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 transition group">
-                            <svg class="w-6 h-6 text-gray-600 group-hover:text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent-100 transition group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-accent-600" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </a>
-                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary-100 transition group">
-                            <svg class="w-6 h-6 text-gray-600 group-hover:text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                        <a href="#" class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent-100 transition group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-accent-600" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                             </svg>
                         </a>
@@ -1089,7 +1086,7 @@
     </section>
 
     <!-- フッター -->
-    <footer class="bg-gradient-to-r from-primary-800 to-primary-900 text-white py-12">
+    <footer class="bg-gradient-to-r from-gray-900 to-black text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <!-- ロゴ・概要 -->
@@ -1099,7 +1096,7 @@
                          class="w-[160px] md:w-[180px] lg:w-[200px] mb-4 brightness-0 invert"
                          loading="lazy"
                          decoding="async">
-                    <p class="text-primary-100 text-sm leading-relaxed">
+                    <p class="text-gray-300 text-sm leading-relaxed">
                         建築の最前線にいる「人」の声を届けるラジオ番組。
                         2026年1月4日より毎週日曜11:00〜11:55放送。
                     </p>
@@ -1109,18 +1106,18 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4">クイックリンク</h4>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-primary-200 hover:text-white transition">番組について</a></li>
-                        <li><a href="#broadcast" class="text-primary-200 hover:text-white transition">放送情報</a></li>
-                        <li><a href="#schedule" class="text-primary-200 hover:text-white transition">放送予定</a></li>
-                        <li><a href="#contact" class="text-primary-200 hover:text-white transition">お問い合わせ</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">番組について</a></li>
+                        <li><a href="#broadcast" class="text-gray-400 hover:text-white transition">放送情報</a></li>
+                        <li><a href="#schedule" class="text-gray-400 hover:text-white transition">放送予定</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">お問い合わせ</a></li>
                     </ul>
                 </div>
 
                 <!-- Presents -->
                 <div>
                     <h4 class="text-lg font-bold mb-4">Presents</h4>
-                    <p class="text-primary-200 text-sm mb-2">一般社団法人 大阪府建築士事務所協会</p>
-                    <p class="text-primary-200 text-sm mb-4">設立50周年記念事業</p>
+                    <p class="text-gray-400 text-sm mb-2">一般社団法人 大阪府建築士事務所協会</p>
+                    <p class="text-gray-400 text-sm mb-4">設立50周年記念事業</p>
                     <a href="https://www.oaaf.or.jp/" target="_blank" rel="noopener noreferrer"
                        class="inline-flex items-center text-accent-400 hover:text-accent-300 transition">
                         協会サイト
@@ -1132,8 +1129,8 @@
             </div>
 
             <!-- コピーライト -->
-            <div class="border-t border-primary-700 pt-8">
-                <p class="text-center text-primary-200 text-sm">
+            <div class="border-t border-gray-700 pt-8">
+                <p class="text-center text-gray-400 text-sm">
                     &copy; 2025 建築のトビラ. All rights reserved. | 一般社団法人 大阪府建築士事務所協会
                 </p>
             </div>
@@ -1172,7 +1169,7 @@
                 document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
                 document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
             } else {
-                document.getElementById('countdown').innerHTML = '<p class="text-2xl font-bold text-primary-600">放送中！</p>';
+                document.getElementById('countdown').innerHTML = '<p class="text-2xl font-bold text-accent-600">放送中！</p>';
             }
         }
 
