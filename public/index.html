@@ -186,6 +186,48 @@
 </head>
 <body class="font-sans bg-gray-50">
 
+    <!-- 初回訪問ポップアップ -->
+    <div id="welcome-popup" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-500 pointer-events-none">
+        <div class="relative bg-white rounded-2xl shadow-2xl max-w-2xl mx-4 p-6 md:p-8 transform scale-95 transition-transform duration-500 max-h-[90vh] overflow-y-auto">
+            <!-- 閉じるボタン -->
+            <button id="close-popup" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition text-2xl leading-none">&times;</button>
+
+            <!-- タイトル -->
+            <div class="text-center mb-6">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-accent-500 to-coral-500 rounded-full mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl md:text-2xl font-bold text-gray-800">新番組スタートのご挨拶</h3>
+            </div>
+
+            <!-- メッセージ本文 -->
+            <div class="text-gray-700 text-sm md:text-base leading-relaxed space-y-4 mb-6">
+                <p>新しいラジオ番組「建築のトビラ」がスタートいたします。</p>
+                <p>この番組は、建築業界で活躍される方々の情熱と人生の物語、そして私たちのまちに溢れる建築の魅力を、広く社会の皆様にお伝えしていくヒューマンドキュメンタリー・インタビュー番組です。</p>
+                <p>建築という仕事は、人々の暮らしを支え、街を作り、未来を形にしていく、とてもやりがいのある仕事です。しかし残念ながら、その魅力が十分に伝わっていないのが現状です。</p>
+                <p>この番組を通じて、建築業界で働く「人」の声を届けることで、建築を「身近で面白い存在」として感じていただき、特に若い世代の皆さんに、建築の可能性を知っていただきたいと考えています。</p>
+                <p>毎週、様々なゲストをお迎えして、建築の奥深さ、面白さ、そして社会的な意義についてお話しいただきます。</p>
+                <p>建築に興味のある方はもちろん、今まで建築にあまり関心がなかった方にも、きっと新しい発見があると思います。</p>
+                <p>それでは、記念すべき第1回目の放送、どうぞお楽しみください。</p>
+            </div>
+
+            <!-- 署名 -->
+            <div class="text-right text-gray-600 text-sm md:text-base border-t pt-4">
+                <p>一般社団法人 大阪府建築士事務所協会</p>
+                <p class="font-semibold">会長　樋上雅博</p>
+            </div>
+
+            <!-- 閉じるボタン（下部） -->
+            <div class="text-center mt-6">
+                <button id="close-popup-btn" class="bg-gradient-to-r from-accent-500 to-coral-500 text-white px-8 py-3 rounded-full font-medium hover:from-accent-600 hover:to-coral-600 transition shadow-lg">
+                    閉じる
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- ナビゲーション -->
     <nav id="navbar" class="fixed top-0 w-full z-50 nav-transparent">
         <div class="container mx-auto px-4">
@@ -237,6 +279,19 @@
 
     <!-- ヒーローセクション -->
     <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
+        <!-- 付箋風の注意書き -->
+        <div class="absolute top-20 left-2 sm:top-24 sm:left-4 md:top-1/4 md:left-8 z-20
+                    w-28 sm:w-36 md:w-48 lg:max-w-xs
+                    transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+            <div class="bg-yellow-200 p-2 sm:p-3 md:p-4 shadow-lg relative" style="box-shadow: 2px 2px 8px rgba(0,0,0,0.2);">
+                <!-- 付箋のテープ風装飾 -->
+                <div class="absolute -top-1.5 sm:-top-2 left-1/2 transform -translate-x-1/2 w-8 sm:w-10 md:w-12 h-3 sm:h-4 bg-yellow-100/80"></div>
+                <p class="text-[10px] sm:text-xs md:text-sm text-yellow-900 font-medium leading-tight sm:leading-relaxed">
+                    ※このサイトは「内部関係者用」の非公開サイトです。内容は調整中のものが多々含まれています。ご理解の上、閲覧してください。
+                </p>
+            </div>
+        </div>
+
         <!-- 背景画像 -->
         <div class="absolute inset-0">
             <img src="https://plus.unsplash.com/premium_photo-1733266825325-1254e9fff8bc?w=1920&q=80&auto=format&fit=crop"
@@ -324,183 +379,223 @@
                 </a>
             </div>
 
-            <!-- 横スクロールカードリスト -->
-            <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-                <!-- EP.1 -->
-                <div class="flex-shrink-0 w-72 snap-start">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                        <div class="relative h-40 bg-gradient-to-br from-accent-400 to-coral-500">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
+            <!-- 最新エピソード（大きく表示） -->
+            <div class="mb-8">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-shadow max-w-4xl mx-auto">
+                    <div class="md:flex">
+                        <!-- サムネイル（2名のゲスト写真） -->
+                        <div class="relative md:w-1/2 h-56 md:h-auto min-h-[14rem]">
+                            <div class="flex h-full">
+                                <div class="w-1/2 h-full">
+                                    <img src="/assets/images/episodes/shukumoto.webp"
+                                         alt="宿本 尚吾 氏"
+                                         class="w-full h-full object-cover"
+                                         style="object-position: center 20%;"
+                                         loading="lazy" decoding="async">
+                                </div>
+                                <div class="w-1/2 h-full">
+                                    <img src="/assets/images/episodes/hinoue.jpg"
+                                         alt="樋上 雅博 氏"
+                                         class="w-full h-full object-cover"
+                                         style="object-position: center 5%;"
+                                         loading="lazy" decoding="async">
+                                </div>
                             </div>
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-6 h-6 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- 再生ボタン（常時表示） -->
+                            <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer">
+                                    <svg class="w-8 h-8 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z"/>
                                     </svg>
                                 </div>
                             </div>
-                            <div class="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded font-medium">
-                                EP.1
+                            <!-- NEWバッジ -->
+                            <div class="absolute top-4 left-4 bg-coral-500 text-white text-sm px-3 py-1 rounded-full font-bold shadow-lg">
+                                NEW
+                            </div>
+                            <!-- EP番号 -->
+                            <div class="absolute bottom-4 left-4 bg-black/60 text-white text-sm px-3 py-1 rounded font-medium">
+                                第1回（特別編）
                             </div>
                         </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-primary-800 mb-2 line-clamp-2">準備中</h3>
-                            <div class="flex items-center text-primary-500 text-sm gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>55:00</span>
+                        <!-- 情報 -->
+                        <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                            <div class="text-accent-500 text-sm font-bold mb-2">最新エピソード</div>
+                            <h3 class="text-xl md:text-2xl font-bold text-primary-800 mb-3">建築業界の未来〜地域と国が目指すもの</h3>
+                            <div class="mb-3 space-y-1">
+                                <p class="text-primary-700 font-semibold"><span class="text-accent-600">●</span> 宿本 尚吾 氏<span class="text-primary-500 font-normal text-sm">（国土交通省 住宅局長）</span></p>
+                                <p class="text-primary-700 font-semibold"><span class="text-accent-600">●</span> 樋上 雅博 氏<span class="text-primary-500 font-normal text-sm">（一般社団法人大阪府建築士事務所協会 会長）</span></p>
+                            </div>
+                            <p class="text-primary-500 mb-4 leading-relaxed text-xs md:text-sm">記念すべき第1回放送は、国の建築行政を担う国土交通省と、地域の建築士事務所協会のトップによる特別対談をお届けします。建築業界への想い、そして次世代へのメッセージまで語ります。</p>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center text-primary-500 gap-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span class="font-medium">55:00</span>
+                                </div>
+                                <div class="flex items-center text-primary-500 gap-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span class="font-medium">2026.01.04</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- EP.2 -->
-                <div class="flex-shrink-0 w-72 snap-start">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                        <div class="relative h-40 bg-gradient-to-br from-coral-400 to-amber-500">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
-                            </div>
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-6 h-6 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+            <!-- 過去エピソード（横スクロール） -->
+            <div>
+                <h3 class="text-lg font-bold text-primary-700 mb-4">過去のエピソード</h3>
+                <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+                    <!-- EP.2 -->
+                    <div class="flex-shrink-0 w-56 snap-start">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-32 bg-gradient-to-br from-coral-400 to-amber-500">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-white/70 text-sm font-medium">Coming soon</span>
+                                </div>
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                        <svg class="w-4 h-4 text-accent-500 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-medium">
+                                    EP.2
                                 </div>
                             </div>
-                            <div class="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded font-medium">
-                                EP.2
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-primary-800 mb-2 line-clamp-2">準備中</h3>
-                            <div class="flex items-center text-primary-500 text-sm gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>55:00</span>
+                            <div class="p-3">
+                                <h4 class="font-bold text-primary-800 text-sm mb-1 line-clamp-1">準備中</h4>
+                                <div class="flex items-center text-primary-500 text-xs gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- EP.3 -->
-                <div class="flex-shrink-0 w-72 snap-start">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                        <div class="relative h-40 bg-gradient-to-br from-amber-400 to-accent-500">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
-                            </div>
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-6 h-6 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+                    <!-- EP.3 -->
+                    <div class="flex-shrink-0 w-56 snap-start">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-32 bg-gradient-to-br from-amber-400 to-accent-500">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-white/70 text-sm font-medium">Coming soon</span>
+                                </div>
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                        <svg class="w-4 h-4 text-accent-500 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-medium">
+                                    EP.3
                                 </div>
                             </div>
-                            <div class="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded font-medium">
-                                EP.3
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-primary-800 mb-2 line-clamp-2">準備中</h3>
-                            <div class="flex items-center text-primary-500 text-sm gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>55:00</span>
+                            <div class="p-3">
+                                <h4 class="font-bold text-primary-800 text-sm mb-1 line-clamp-1">準備中</h4>
+                                <div class="flex items-center text-primary-500 text-xs gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- EP.4 -->
-                <div class="flex-shrink-0 w-72 snap-start">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                        <div class="relative h-40 bg-gradient-to-br from-accent-500 to-coral-400">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
-                            </div>
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-6 h-6 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+                    <!-- EP.4 -->
+                    <div class="flex-shrink-0 w-56 snap-start">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-32 bg-gradient-to-br from-accent-500 to-coral-400">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-white/70 text-sm font-medium">Coming soon</span>
+                                </div>
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                        <svg class="w-4 h-4 text-accent-500 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-medium">
+                                    EP.4
                                 </div>
                             </div>
-                            <div class="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded font-medium">
-                                EP.4
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-primary-800 mb-2 line-clamp-2">準備中</h3>
-                            <div class="flex items-center text-primary-500 text-sm gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>55:00</span>
+                            <div class="p-3">
+                                <h4 class="font-bold text-primary-800 text-sm mb-1 line-clamp-1">準備中</h4>
+                                <div class="flex items-center text-primary-500 text-xs gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- EP.5 -->
-                <div class="flex-shrink-0 w-72 snap-start">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                        <div class="relative h-40 bg-gradient-to-br from-coral-500 to-accent-400">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
-                            </div>
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-6 h-6 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+                    <!-- EP.5 -->
+                    <div class="flex-shrink-0 w-56 snap-start">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-32 bg-gradient-to-br from-coral-500 to-accent-400">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-white/70 text-sm font-medium">Coming soon</span>
+                                </div>
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                        <svg class="w-4 h-4 text-accent-500 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-medium">
+                                    EP.5
                                 </div>
                             </div>
-                            <div class="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded font-medium">
-                                EP.5
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-primary-800 mb-2 line-clamp-2">準備中</h3>
-                            <div class="flex items-center text-primary-500 text-sm gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>55:00</span>
+                            <div class="p-3">
+                                <h4 class="font-bold text-primary-800 text-sm mb-1 line-clamp-1">準備中</h4>
+                                <div class="flex items-center text-primary-500 text-xs gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- EP.6 -->
-                <div class="flex-shrink-0 w-72 snap-start">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
-                        <div class="relative h-40 bg-gradient-to-br from-amber-500 to-coral-500">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
-                            </div>
-                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg">
-                                    <svg class="w-6 h-6 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z"/>
-                                    </svg>
+                    <!-- EP.6 -->
+                    <div class="flex-shrink-0 w-56 snap-start">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
+                            <div class="relative h-32 bg-gradient-to-br from-amber-500 to-coral-500">
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <span class="text-white/70 text-sm font-medium">Coming soon</span>
+                                </div>
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                        <svg class="w-4 h-4 text-accent-500 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded font-medium">
+                                    EP.6
                                 </div>
                             </div>
-                            <div class="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded font-medium">
-                                EP.6
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-primary-800 mb-2 line-clamp-2">準備中</h3>
-                            <div class="flex items-center text-primary-500 text-sm gap-1">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span>55:00</span>
+                            <div class="p-3">
+                                <h4 class="font-bold text-primary-800 text-sm mb-1 line-clamp-1">準備中</h4>
+                                <div class="flex items-center text-primary-500 text-xs gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -837,110 +932,316 @@
                 <h2 class="text-4xl font-bold text-primary-800 mb-4">今後の放送予定</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
                 <p class="text-lg text-primary-600">豪華ゲストと共に建築の世界を探求します</p>
+                <p class="text-sm text-red-600 mt-4">※個人名が出ておりますが、内部関係者用の非公開のサイトです。あくまでも予定です。</p>
             </div>
 
-            <!-- タイムライン -->
+            <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
-                <div class="relative">
-                    <!-- 縦線 -->
-                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-primary-300"></div>
-
-                    <!-- 予定項目 -->
-                    <div class="space-y-8">
-                        <!-- 項目1 -->
-                        <div class="relative flex items-start" data-aos="fade-right">
-                            <div class="absolute left-8 w-4 h-4 bg-primary-400 rounded-full -translate-x-1/2 mt-1.5"></div>
-                            <div class="ml-20 bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:shadow-accent-500/20 transition-shadow border border-primary-200">
-                                <div class="text-sm text-accent-500 font-bold mb-2">第1回〜第4回</div>
-                                <h3 class="text-lg font-bold text-primary-800 mb-2">建築最前線：建築士の役割を紐解く</h3>
-                                <p class="text-primary-600 text-sm mb-3">
-                                    国土交通省、大阪府建築士事務所協会会長、日本建築士事務所協会連合会会長など、業界のキーパーソンが登場
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded">行政</span>
-                                    <span class="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded">建築士</span>
-                                    <span class="text-xs bg-primary-100 text-primary-600 px-2 py-1 rounded">協会</span>
-                                </div>
+                <div class="grid gap-3">
+                    <!-- 1回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">1回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築業界の未来〜地域と国が目指すもの</h3>
+                                <p class="text-primary-500 text-sm">樋上 雅博 氏（大阪府建築士事務所協会 会長）、宿本 尚吾 氏（国土交通省 住宅局長）</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- 項目2 -->
-                        <div class="relative flex items-start" data-aos="fade-right" data-aos-delay="100">
-                            <div class="absolute left-8 w-4 h-4 bg-accent-500 rounded-full -translate-x-1/2 mt-1.5"></div>
-                            <div class="ml-20 bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:shadow-accent-500/20 transition-shadow border border-primary-200">
-                                <div class="text-sm text-accent-500 font-bold mb-2">特別企画</div>
-                                <h3 class="text-lg font-bold text-primary-800 mb-2">万博が残したもの</h3>
-                                <p class="text-primary-600 text-sm mb-3">
-                                    大阪関西万博会場デザインプロデューサーが語る、万博建築の挑戦と未来への遺産
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-accent-50 text-accent-600 px-2 py-1 rounded border border-accent-200">万博</span>
-                                    <span class="text-xs bg-accent-50 text-accent-600 px-2 py-1 rounded border border-accent-200">デザイン</span>
-                                    <span class="text-xs bg-accent-50 text-accent-600 px-2 py-1 rounded border border-accent-200">未来</span>
-                                </div>
+                    <!-- 2回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">2回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">引継ぐ魂</h3>
+                                <p class="text-primary-500 text-sm">佐野 吉彦 氏（大阪府建築士事務所協会 名誉会長）</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- 項目3 -->
-                        <div class="relative flex items-start" data-aos="fade-right" data-aos-delay="200">
-                            <div class="absolute left-8 w-4 h-4 bg-teal-500 rounded-full -translate-x-1/2 mt-1.5"></div>
-                            <div class="ml-20 bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:shadow-teal-500/20 transition-shadow border border-primary-200">
-                                <div class="text-sm text-teal-600 font-bold mb-2">歴史と伝統</div>
-                                <h3 class="text-lg font-bold text-primary-800 mb-2">近代建築の残したもの</h3>
-                                <p class="text-primary-600 text-sm mb-3">
-                                    建築史家、大阪公立大学特別教授による、日本の近代建築の価値と保存の重要性
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-teal-50 text-teal-600 px-2 py-1 rounded border border-teal-200">建築史</span>
-                                    <span class="text-xs bg-teal-50 text-teal-600 px-2 py-1 rounded border border-teal-200">保存</span>
-                                    <span class="text-xs bg-teal-50 text-teal-600 px-2 py-1 rounded border border-teal-200">文化</span>
-                                </div>
+                    <!-- 3回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">3回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築業界の未来</h3>
+                                <p class="text-primary-500 text-sm">上野 浩也 氏（日本建築士事務所協会連合会 会長）</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- 項目4 -->
-                        <div class="relative flex items-start" data-aos="fade-right" data-aos-delay="300">
-                            <div class="absolute left-8 w-4 h-4 bg-purple-500 rounded-full -translate-x-1/2 mt-1.5"></div>
-                            <div class="ml-20 bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:shadow-purple-500/20 transition-shadow border border-primary-200">
-                                <div class="text-sm text-purple-600 font-bold mb-2">著名建築家シリーズ</div>
-                                <h3 class="text-lg font-bold text-primary-800 mb-2">国立競技場、愛知アリーナの裏話</h3>
-                                <p class="text-primary-600 text-sm mb-3">
-                                    隈研吾氏など著名建築家が語る、有名建築プロジェクトの知られざるエピソード
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded border border-purple-200">隈研吾</span>
-                                    <span class="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded border border-purple-200">スタジアム</span>
-                                    <span class="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded border border-purple-200">プロジェクト</span>
-                                </div>
+                    <!-- 4回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">4回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">万博が残したもの</h3>
+                                <p class="text-primary-500 text-sm">藤本 壮介 氏（大阪関西万博会場デザインプロデューサー）</p>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- 項目5 -->
-                        <div class="relative flex items-start" data-aos="fade-right" data-aos-delay="400">
-                            <div class="absolute left-8 w-4 h-4 bg-pink-500 rounded-full -translate-x-1/2 mt-1.5"></div>
-                            <div class="ml-20 bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl hover:shadow-pink-500/20 transition-shadow border border-primary-200">
-                                <div class="text-sm text-pink-600 font-bold mb-2">建築×エンタメ</div>
-                                <h3 class="text-lg font-bold text-primary-800 mb-2">建築の観方を紹介</h3>
-                                <p class="text-primary-600 text-sm mb-3">
-                                    テレビ東京「名建築で昼食を」原作者が教える、建築を100倍楽しむ方法
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="text-xs bg-pink-50 text-pink-600 px-2 py-1 rounded border border-pink-200">メディア</span>
-                                    <span class="text-xs bg-pink-50 text-pink-600 px-2 py-1 rounded border border-pink-200">建築巡り</span>
-                                    <span class="text-xs bg-pink-50 text-pink-600 px-2 py-1 rounded border border-pink-200">楽しみ方</span>
-                                </div>
+                    <!-- 5回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">5回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">近代建築の残したもの</h3>
+                                <p class="text-primary-500 text-sm">橋爪 紳也 氏（建築史家、大阪公立大学特別教授）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">6回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">話題の建築紹介</h3>
+                                <p class="text-primary-500 text-sm">隈 研吾 氏（建築家）、佐野 吉彦 氏（大阪府建築士事務所協会 名誉会長）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">7回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築の観方を紹介</h3>
+                                <p class="text-primary-500 text-sm">甲斐 みのり 氏（文筆家、テレビ東京「名建築で昼食を」原作者）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8-1回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">8-1回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築現場の現在</h3>
+                                <p class="text-primary-500 text-sm">大林組</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8-2回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">8-2回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築現場の現在</h3>
+                                <p class="text-primary-500 text-sm">竹中工務店</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8-3回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">8-3回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築現場の現在</h3>
+                                <p class="text-primary-500 text-sm">清水建設</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">9回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">日本伝統建築の保存</h3>
+                                <p class="text-primary-500 text-sm">鳥羽瀬 公二 氏（鳥羽瀬社寺建築会長、日本伝統建築技術保存会会長）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 10回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">10回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築と音楽の関係</h3>
+                                <p class="text-primary-500 text-sm">佐野 吉彦 氏（大阪府建築士事務所協会 名誉会長）ほか</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11-1回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">11-1回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">最新プロジェクトの紹介</h3>
+                                <p class="text-primary-500 text-sm">三菱地所</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11-2回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">11-2回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">最新プロジェクトの紹介</h3>
+                                <p class="text-primary-500 text-sm">日建設計</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 11-3回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">11-3回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">最新プロジェクトの紹介</h3>
+                                <p class="text-primary-500 text-sm">東畑建築事務所</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 12回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">12回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築と芸術</h3>
+                                <p class="text-primary-500 text-sm">山田 五郎 氏（美術評論家）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 13-1回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">13-1回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">耐震建築、リニューアル</h3>
+                                <p class="text-primary-500 text-sm">西濱 浩次 氏（コンパス建築工房）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 13-2回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">13-2回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">耐震建築、リニューアル</h3>
+                                <p class="text-primary-500 text-sm">青木 茂 氏（青木茂建築工房）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 14回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">14回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">建築と音楽の関係</h3>
+                                <p class="text-primary-500 text-sm">佐野 吉彦 氏（大阪府建築士事務所協会 名誉会長）ほか</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 15回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">15回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">東京建築祭の紹介</h3>
+                                <p class="text-primary-500 text-sm">倉方 俊輔 氏（建築史家、大阪公立大学教授、東京建築祭実行委員長）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 16-1回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">16-1回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">大学教育</h3>
+                                <p class="text-primary-500 text-sm">武庫川女子大学 建築学部</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 16-2回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">16-2回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">大学教育</h3>
+                                <p class="text-primary-500 text-sm">立命館大学 工学部 建築学科</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 16-3回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">16-3回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">大学教育</h3>
+                                <p class="text-primary-500 text-sm">近畿大学 建築学部</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- その他のゲスト -->
-            <div class="mt-16 text-center">
-                <p class="text-lg text-primary-800 font-bold mb-4">その他予定ゲスト</p>
-                <p class="text-primary-600 max-w-3xl mx-auto">
-                    日本伝統建築技術保存会会長、美術評論家など、建築×芸術・文化の第一人者が続々登場予定
-                </p>
+            <!-- 注釈 -->
+            <div class="mt-8 text-center">
+                <p class="text-primary-500 text-sm">※放送内容・ゲストは変更になる場合があります</p>
             </div>
         </div>
     </section>
@@ -1643,6 +1944,72 @@
                 imageObserver.observe(img);
             });
         }
+
+        // ウェルカムポップアップ（ヒーローセクションに来るたびに表示）
+        const welcomePopup = document.getElementById('welcome-popup');
+        const closePopupBtn = document.getElementById('close-popup');
+        const closePopupBtnBottom = document.getElementById('close-popup-btn');
+        const popupContent = welcomePopup.querySelector('div');
+        const heroSection = document.getElementById('hero');
+        let popupShownThisSession = false;
+
+        // ポップアップを表示する関数
+        function showWelcomePopup() {
+            welcomePopup.classList.remove('opacity-0', 'pointer-events-none');
+            welcomePopup.classList.add('opacity-100');
+            popupContent.classList.remove('scale-95');
+            popupContent.classList.add('scale-100');
+        }
+
+        // ポップアップを閉じる関数
+        function closeWelcomePopup() {
+            welcomePopup.classList.add('opacity-0', 'pointer-events-none');
+            welcomePopup.classList.remove('opacity-100');
+            popupContent.classList.add('scale-95');
+            popupContent.classList.remove('scale-100');
+            popupShownThisSession = true;
+        }
+
+        // ページ読み込み時に1秒遅延して表示
+        setTimeout(() => {
+            showWelcomePopup();
+        }, 1000);
+
+        // ヒーローセクションが表示されたらポップアップを再表示
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && popupShownThisSession) {
+                    popupShownThisSession = false;
+                    setTimeout(() => {
+                        showWelcomePopup();
+                    }, 500);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        if (heroSection) {
+            heroObserver.observe(heroSection);
+        }
+
+        // 閉じるボタン（×）
+        closePopupBtn.addEventListener('click', closeWelcomePopup);
+
+        // 閉じるボタン（下部）
+        closePopupBtnBottom.addEventListener('click', closeWelcomePopup);
+
+        // 背景クリックでも閉じる
+        welcomePopup.addEventListener('click', (e) => {
+            if (e.target === welcomePopup) {
+                closeWelcomePopup();
+            }
+        });
+
+        // ESCキーでも閉じる
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !welcomePopup.classList.contains('opacity-0')) {
+                closeWelcomePopup();
+            }
+        });
     </script>
 </body>
 </html>
