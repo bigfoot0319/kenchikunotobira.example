@@ -207,6 +207,7 @@
                     <a href="#cast" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">出演者</a>
                     <a href="#broadcast" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">放送情報</a>
                     <a href="#pillars" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">5つの柱</a>
+                    <a href="#contents" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">コンテンツ</a>
                     <a href="#schedule" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">放送予定</a>
                     <a href="#stations" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">放送局</a>
                     <a href="#contact" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">お問い合わせ</a>
@@ -227,6 +228,7 @@
                     <a href="#cast" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">出演者</a>
                     <a href="#broadcast" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">放送情報</a>
                     <a href="#pillars" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">5つの柱</a>
+                    <a href="#contents" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">コンテンツ</a>
                     <a href="#schedule" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">放送予定</a>
                     <a href="#stations" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">放送局</a>
                     <a href="#contact" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">お問い合わせ</a>
@@ -325,7 +327,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- 画像 -->
                 <div class="relative" data-aos="fade-right">
-                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80"
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
                          alt="建築現場"
                          loading="lazy"
                          decoding="async"
@@ -506,32 +508,6 @@
                 </div>
             </div>
 
-            <!-- 番組構成 -->
-            <div class="mt-16 bg-primary-50 rounded-2xl shadow-lg p-8 border border-primary-200" data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-primary-800 mb-6 text-center">番組構成（55分）</h3>
-                <div class="grid md:grid-cols-4 gap-4">
-                    <div class="text-center p-4 bg-white rounded-xl shadow-sm border border-primary-200">
-                        <p class="text-3xl font-bold text-primary-700 mb-2">3分</p>
-                        <p class="text-sm font-bold text-primary-700">オープニング</p>
-                        <p class="text-xs text-primary-500 mt-1">ゲスト紹介・テーマ</p>
-                    </div>
-                    <div class="text-center p-4 bg-accent-50 rounded-xl border border-accent-200">
-                        <p class="text-3xl font-bold text-accent-600 mb-2">32分</p>
-                        <p class="text-sm font-bold text-primary-700">メイントーク</p>
-                        <p class="text-xs text-primary-500 mt-1">ゲストインタビュー</p>
-                    </div>
-                    <div class="text-center p-4 bg-teal-50 rounded-xl border border-teal-200">
-                        <p class="text-3xl font-bold text-teal-600 mb-2">5分</p>
-                        <p class="text-sm font-bold text-primary-700">コーナー</p>
-                        <p class="text-xs text-primary-500 mt-1">週替わり企画</p>
-                    </div>
-                    <div class="text-center p-4 bg-purple-50 rounded-xl border border-purple-200">
-                        <p class="text-3xl font-bold text-purple-600 mb-2">15分</p>
-                        <p class="text-sm font-bold text-primary-700">音楽・他</p>
-                        <p class="text-xs text-primary-500 mt-1">エンディング含む</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -615,8 +591,74 @@
         </div>
     </section>
 
+    <!-- コンテンツ -->
+    <section id="contents" class="py-20 bg-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-primary-800 mb-4">コンテンツ</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
+                <p class="text-lg text-primary-600 max-w-3xl mx-auto">
+                    番組を構成する3つのコーナーをご紹介します
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- メイントーク -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all border border-primary-200" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-medium">人</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-800 mb-3">メイントーク</h3>
+                    <p class="text-sm text-primary-500 font-medium mb-3">建築の最前線にいる「人」の声を届ける</p>
+                    <p class="text-primary-600 leading-relaxed text-sm">
+                        番組のメインコーナー。建築家、構造設計者、施工管理者、職人、経営者、研究者——。立場は違えど、「建築」という仕事に人生を賭けてきた人たちの「歩んできた道」と「これから描く未来」をじっくりお聴きします。
+                    </p>
+                </div>
+
+                <!-- 匠と美穂の建築さんぽ -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-teal-500/20 transition-all border border-primary-200" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-16 h-16 bg-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <span class="text-xs bg-teal-100 text-teal-600 px-3 py-1 rounded-full font-medium">建築物</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-800 mb-3">匠と美穂の建築さんぽ</h3>
+                    <p class="text-sm text-primary-500 font-medium mb-3">親子の目線で街を歩けば、建築はもっとおもしろい</p>
+                    <p class="text-primary-600 leading-relaxed text-sm">
+                        一級建築士の母「美穂」と、将来建築士を目指す中学生の息子「匠」。母の「プロの視点」と息子の「素直な感動・疑問」が交差することで、専門知識がなくても楽しめる建築紹介を実現します。
+                    </p>
+                </div>
+
+                <!-- 扉をひらいた日 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-coral-500/20 transition-all border border-primary-200" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-coral-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <span class="text-xs bg-coral-100 text-coral-600 px-3 py-1 rounded-full font-medium">人</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary-800 mb-3">扉をひらいた日</h3>
+                    <p class="text-sm text-primary-500 font-medium mb-3">建築の世界への扉をひらいた、あの日の物語</p>
+                    <p class="text-primary-600 leading-relaxed text-sm">
+                        建築・建設業界で活躍する一人の人物にスポットを当て、この世界に飛び込んだ「きっかけ」から、現在の仕事で輝いている姿までを描く5分間のヒューマンストーリー。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 放送予定 -->
-    <section id="schedule" class="py-20 bg-white" data-aos="fade-up">
+    <section id="schedule" class="py-20 bg-primary-100" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-primary-800 mb-4">今後の放送予定</h2>
@@ -837,90 +879,6 @@
         </div>
     </section>
 
-    <!-- 協賛・スポンサー募集 -->
-    <section id="sponsor" class="py-20 bg-white" data-aos="fade-up">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">協賛・スポンサー募集</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
-                <p class="text-lg text-primary-600 max-w-3xl mx-auto">
-                    建築業界の未来を共に創る企業様を募集しています
-                </p>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-primary-200">
-                    <h3 class="text-2xl font-bold text-primary-800 mb-6">協賛のメリット</h3>
-
-                    <div class="grid md:grid-cols-2 gap-6 mb-8">
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                                <svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary-800 mb-2">全国97局での露出</h4>
-                                <p class="text-sm text-primary-600">ミュージックバードを通じて全国のリスナーにリーチ</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-coral-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                                <svg class="w-6 h-6 text-coral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary-800 mb-2">デジタル配信での拡散</h4>
-                                <p class="text-sm text-primary-600">Spotify、YouTubeでの永続的なアーカイブ配信</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                                <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary-800 mb-2">ブランド価値向上</h4>
-                                <p class="text-sm text-primary-600">建築業界の発展に貢献する企業としてのイメージ向上</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start">
-                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
-                                <svg class="w-6 h-6 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-primary-800 mb-2">ターゲット層への訴求</h4>
-                                <p class="text-sm text-primary-600">建築関係者・学生・建築愛好者への直接的なアプローチ</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-accent-50 rounded-xl p-6 mb-8 border border-accent-200">
-                        <p class="text-center text-primary-800 font-bold">
-                            大阪府建築士事務所協会設立50周年記念事業として、
-                            <br class="hidden lg:block">
-                            建築業界の未来を創る重要なプロジェクトです
-                        </p>
-                    </div>
-
-                    <div class="text-center">
-                        <p class="text-primary-600 mb-6">協賛に関するお問い合わせはこちらから</p>
-                        <a href="#contact" class="inline-block bg-gradient-to-r from-accent-500 to-coral-500 text-white px-8 py-4 rounded-full font-bold hover:from-accent-400 hover:to-coral-400 transition-all hover:shadow-lg hover:shadow-accent-500/30">
-                            お問い合わせフォームへ
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- 大阪府建築士事務所協会について -->
     <section id="association" class="py-20 bg-primary-100" data-aos="fade-up">
         <div class="container mx-auto px-4">
@@ -1056,7 +1014,6 @@
                             <select id="subject" name="subject" required
                                     class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent">
                                 <option value="">選択してください</option>
-                                <option value="sponsor">協賛・スポンサーについて</option>
                                 <option value="guest">ゲスト出演について</option>
                                 <option value="feedback">番組へのご意見・ご要望</option>
                                 <option value="media">取材・メディア掲載について</option>
