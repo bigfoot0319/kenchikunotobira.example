@@ -101,9 +101,10 @@
 
     <!-- カスタムCSS -->
     <style>
-        /* スムーススクロール */
-        html {
+        /* スムーススクロール & 横スクロール防止 */
+        html, body {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         /* ナビゲーションの初期状態（透明） */
@@ -279,14 +280,14 @@
 
     <!-- ヒーローセクション -->
     <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
-        <!-- 付箋風の注意書き -->
-        <div class="absolute bottom-4 left-2 right-2 sm:bottom-auto sm:right-auto sm:top-24 sm:left-4 md:top-1/4 md:left-8 z-20
-                    w-auto sm:w-36 md:w-48 lg:max-w-xs
-                    transform rotate-0 sm:-rotate-2 hover:rotate-0 transition-transform duration-300">
-            <div class="bg-yellow-200 p-2 sm:p-3 md:p-4 shadow-lg relative" style="box-shadow: 2px 2px 8px rgba(0,0,0,0.2);">
+        <!-- 付箋風の注意書き（タブレット以上で表示） -->
+        <div class="hidden sm:block absolute sm:top-24 sm:left-4 md:top-1/4 md:left-8 z-20
+                    sm:w-36 md:w-48 lg:max-w-xs
+                    transform sm:-rotate-2 hover:rotate-0 transition-transform duration-300">
+            <div class="bg-yellow-200 p-3 md:p-4 shadow-lg relative" style="box-shadow: 2px 2px 8px rgba(0,0,0,0.2);">
                 <!-- 付箋のテープ風装飾 -->
-                <div class="absolute -top-1.5 sm:-top-2 left-1/2 transform -translate-x-1/2 w-8 sm:w-10 md:w-12 h-3 sm:h-4 bg-yellow-100/80"></div>
-                <p class="text-[9px] sm:text-xs md:text-sm text-yellow-900 font-medium leading-tight sm:leading-relaxed">
+                <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-10 md:w-12 h-4 bg-yellow-100/80"></div>
+                <p class="text-xs md:text-sm text-yellow-900 font-medium leading-relaxed">
                     ※このサイトは「内部関係者用」の非公開サイトです。内容は調整中のものが多々含まれています。ご理解の上、閲覧してください。
                 </p>
             </div>
@@ -348,6 +349,15 @@
                             <div class="countdown-item text-4xl lg:text-5xl font-bold bg-gradient-to-r from-accent-500 to-coral-500 bg-clip-text text-transparent" id="seconds">00</div>
                             <p class="text-sm text-primary-600 mt-2">秒</p>
                         </div>
+                    </div>
+                </div>
+
+                <!-- 付箋風の注意書き（スマホのみ表示） -->
+                <div class="sm:hidden flex justify-center mt-6 mb-4">
+                    <div class="bg-yellow-200 p-2 shadow-md rounded max-w-xs text-center" style="box-shadow: 2px 2px 6px rgba(0,0,0,0.15);">
+                        <p class="text-[9px] text-yellow-900 font-medium leading-tight">
+                            ※このサイトは「内部関係者用」の非公開サイトです。内容は調整中のものが多々含まれています。
+                        </p>
                     </div>
                 </div>
 
