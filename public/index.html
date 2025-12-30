@@ -246,11 +246,8 @@
 
                 <!-- デスクトップメニュー -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#episodes" class="bg-gradient-to-r from-accent-500 to-coral-500 text-white px-4 py-2 rounded-full font-medium hover:from-accent-600 hover:to-coral-600 transition shadow-lg">エピソードを聴く</a>
-                    <a href="#about" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">番組について</a>
-                    <a href="#cast" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">出演者</a>
-                    <a href="#broadcast" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">放送情報</a>
-                    <a href="#contents" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">コーナー</a>
+                    <a href="#broadcast" class="bg-gradient-to-r from-accent-500 to-coral-500 text-white px-4 py-2 rounded-full font-medium hover:from-accent-600 hover:to-coral-600 transition shadow-lg">エピソードを聴く</a>
+                    <a href="#about" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">about</a>
                     <a href="#schedule" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">放送予定</a>
                     <a href="#contact" class="nav-link text-white drop-shadow-md hover:text-accent-300 transition">お問い合わせ</a>
                 </div>
@@ -266,11 +263,8 @@
             <!-- モバイルメニュー -->
             <div id="mobile-menu" class="hidden lg:hidden pb-4 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
                 <div class="flex flex-col space-y-2 p-2">
-                    <a href="#episodes" class="mobile-nav-link block px-4 py-2 bg-gradient-to-r from-accent-500 to-coral-500 text-white font-medium rounded-lg text-center">エピソードを聴く</a>
-                    <a href="#about" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">番組について</a>
-                    <a href="#cast" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">出演者</a>
-                    <a href="#broadcast" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">放送情報</a>
-                    <a href="#contents" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">コーナー</a>
+                    <a href="#broadcast" class="mobile-nav-link block px-4 py-2 bg-gradient-to-r from-accent-500 to-coral-500 text-white font-medium rounded-lg text-center">エピソードを聴く</a>
+                    <a href="#about" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">about</a>
                     <a href="#schedule" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">放送予定</a>
                     <a href="#contact" class="mobile-nav-link block px-4 py-2 text-primary-700 hover:bg-accent-50 hover:text-accent-500 rounded">お問い合わせ</a>
                 </div>
@@ -636,13 +630,14 @@
     <section id="broadcast" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">ラジオ放送情報・視聴方法</h2>
+                <h2 class="text-4xl font-bold text-primary-800 mb-4">エピソード視聴方法</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <!-- ラジオ -->
                 <div id="radio-listen-btn" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-accent-500/20 transition-all hover:-translate-y-2 border border-primary-200 cursor-pointer group" data-aos="zoom-in">
+                    <p class="text-sm font-bold text-accent-500 text-center mb-4 group-hover:text-accent-600 transition-colors">生放送で聴く</p>
                     <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-accent-200 transition-colors">
                         <svg class="w-8 h-8 text-accent-500 group-hover:text-accent-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
@@ -671,6 +666,7 @@
 
                 <!-- Spotify -->
                 <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all hover:-translate-y-2 border border-primary-200" data-aos="zoom-in" data-aos-delay="100">
+                    <p class="text-sm font-bold text-green-600 text-center mb-4">アーカイブ・解説音声を聴く</p>
                     <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
@@ -836,7 +832,7 @@
     <section id="about" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">番組について</h2>
+                <h2 class="text-4xl font-bold text-primary-800 mb-4">プラットフォームについて</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto"></div>
             </div>
 
@@ -854,16 +850,16 @@
                 <!-- テキスト -->
                 <div data-aos="fade-left">
                     <h3 class="text-2xl font-bold text-primary-800 mb-6">
-                        建築の最前線にいる「人」の声を届ける
+                        建築の最前線にいる「人」の声を、あらゆるメディアで届ける
                     </h3>
                     <p class="text-primary-600 mb-4 leading-relaxed">
-                        「建築のトビラ」は、設計図でも統計でもなく、建築に携わる人々の"人間の選択"と"未来への意志"を描くラジオ番組です。
+                        「建築のトビラ」は、建築と人をつなぐ情報発信プラットフォームです。
                     </p>
                     <p class="text-primary-600 mb-4 leading-relaxed">
-                        建設業界で活躍する様々な立場の人々—建築士、設計者、施工管理者、そして若手からベテランまで—の生の声をお届けします。
+                        全国のコミュニティFMラジオを入口に、ポッドキャスト、YouTube、SNS、Webサイトへと展開。設計図でも統計でもなく、建築に携わる人々の"人間の選択"と"未来への意志"を、多様なメディアを通じてお届けします。
                     </p>
                     <p class="text-primary-600 mb-6 leading-relaxed">
-                        最新テクノロジーと伝統技術の融合、社会課題への挑戦、女性活躍の現場など、建築業界の「今」と「未来」を多角的に描き出します。
+                        建築家、設計者、施工管理者、そして若手からベテランまで——建設業界で活躍する様々な立場の人々の生の声を、あなたの届きやすい形で届けます。
                     </p>
 
                     <!-- ミッション -->
@@ -886,7 +882,7 @@
                                 <svg class="w-5 h-5 text-accent-500 mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                 </svg>
-                                <span>次世代の担い手を増やし、業界の未来を創る</span>
+                                <span>1つのコンテンツを100の響きに変え、広く届ける</span>
                             </li>
                         </ul>
                     </div>
@@ -1086,7 +1082,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-primary-800 mb-4">お問い合わせ</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
-                <p class="text-lg text-primary-600">番組へのご意見・ご要望のお問い合わせなど</p>
+                <p class="text-lg text-primary-600">あなたの感想・ご意見・ご要望やお問い合わせなど</p>
             </div>
 
             <div class="max-w-3xl mx-auto">
