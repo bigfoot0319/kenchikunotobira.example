@@ -1613,13 +1613,18 @@
             <div class="max-w-3xl mx-auto">
                 <!-- お問い合わせフォーム -->
                 <div class="bg-primary-100 rounded-2xl shadow-xl p-8 lg:p-12 mb-12 border border-primary-200">
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://ssgform.com/s/JPl61kGb9PiC" method="post">
+                        <!-- ハニーポット（スパム対策：ボットはこのフィールドを自動入力する） -->
+                        <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+                        <!-- タイムベース検証（スパム対策：フォーム読み込み時刻を記録） -->
+                        <input type="hidden" name="_form_loaded_at" value="">
+
                         <div class="grid md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-primary-800 font-bold mb-2" for="name">
                                     お名前 <span class="text-coral-500">*</span>
                                 </label>
-                                <input type="text" id="name" name="name" required
+                                <input type="text" id="name" name="お名前" required
                                        class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent placeholder-primary-400">
                             </div>
 
@@ -1627,7 +1632,7 @@
                                 <label class="block text-primary-800 font-bold mb-2" for="company">
                                     会社名・団体名
                                 </label>
-                                <input type="text" id="company" name="company"
+                                <input type="text" id="company" name="会社名・団体名"
                                        class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent placeholder-primary-400">
                             </div>
                         </div>
@@ -1637,7 +1642,7 @@
                                 <label class="block text-primary-800 font-bold mb-2" for="email">
                                     メールアドレス <span class="text-coral-500">*</span>
                                 </label>
-                                <input type="email" id="email" name="email" required
+                                <input type="email" id="email" name="メールアドレス" required
                                        class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent placeholder-primary-400">
                             </div>
 
@@ -1645,7 +1650,7 @@
                                 <label class="block text-primary-800 font-bold mb-2" for="phone">
                                     電話番号
                                 </label>
-                                <input type="tel" id="phone" name="phone"
+                                <input type="tel" id="phone" name="電話番号"
                                        class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent placeholder-primary-400">
                             </div>
                         </div>
@@ -1654,13 +1659,13 @@
                             <label class="block text-primary-800 font-bold mb-2" for="subject">
                                 お問い合わせ種別 <span class="text-coral-500">*</span>
                             </label>
-                            <select id="subject" name="subject" required
+                            <select id="subject" name="お問い合わせ種別" required
                                     class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent">
                                 <option value="">選択してください</option>
-                                <option value="guest">ゲスト出演について</option>
-                                <option value="feedback">番組へのご意見・ご要望</option>
-                                <option value="media">取材・メディア掲載について</option>
-                                <option value="other">その他</option>
+                                <option value="ゲスト出演について">ゲスト出演について</option>
+                                <option value="番組へのご意見・ご要望">番組へのご意見・ご要望</option>
+                                <option value="取材・メディア掲載について">取材・メディア掲載について</option>
+                                <option value="その他">その他</option>
                             </select>
                         </div>
 
@@ -1668,7 +1673,7 @@
                             <label class="block text-primary-800 font-bold mb-2" for="message">
                                 お問い合わせ内容 <span class="text-coral-500">*</span>
                             </label>
-                            <textarea id="message" name="message" rows="6" required
+                            <textarea id="message" name="お問い合わせ内容" rows="6" required
                                       class="w-full px-4 py-3 bg-white border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500 focus:border-transparent placeholder-primary-400"></textarea>
                         </div>
 
@@ -2001,6 +2006,12 @@
                 closeWelcomePopup();
             }
         });
+
+        // タイムベース検証：フォーム読み込み時刻を設定（スパム対策）
+        const formLoadedAtField = document.querySelector('input[name="_form_loaded_at"]');
+        if (formLoadedAtField) {
+            formLoadedAtField.value = Date.now();
+        }
     </script>
 </body>
 </html>
