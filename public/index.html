@@ -344,7 +344,7 @@
                     <p class="text-2xl font-bold bg-gradient-to-r from-accent-600 to-coral-500 bg-clip-text text-transparent mb-4">2026年1月4日(日) START!</p>
                     <p class="text-lg text-primary-700 mb-2">毎週日曜 11:00〜11:55</p>
                     <p class="text-primary-600">ミュージックバードから全国97局のコミュニティFM局へ配信</p>
-                    <p class="text-sm text-accent-600 mt-4 font-medium"><a href="#association" class="hover:text-accent-700 hover:underline transition">Presents: 一般社団法人 大阪府建築士事務所協会</a></p>
+                    <p class="text-sm text-accent-600 mt-4 font-medium"><a href="#association" class="hover:text-accent-700 hover:underline transition">協力：一般社団法人 大阪府建築士事務所協会</a></p>
                 </div>
 
             </div>
@@ -371,28 +371,25 @@
             <div class="mb-8">
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-shadow max-w-4xl mx-auto">
                     <div class="md:flex">
-                        <!-- サムネイル（2名のゲスト写真） -->
+                        <!-- サムネイル（収録風景 + 記念撮影） -->
                         <div class="relative md:w-1/2 h-56 md:h-auto min-h-[14rem]">
-                            <div class="flex h-full">
-                                <div class="w-1/2 h-full">
-                                    <img src="/assets/images/episodes/shukumoto.webp"
-                                         alt="宿本 尚吾 氏"
-                                         class="w-full h-full object-cover"
-                                         style="object-position: center 20%;"
-                                         loading="lazy" decoding="async">
-                                </div>
-                                <div class="w-1/2 h-full">
-                                    <img src="/assets/images/episodes/hinoue.jpg"
-                                         alt="樋上 雅博 氏"
-                                         class="w-full h-full object-cover"
-                                         style="object-position: center 5%;"
-                                         loading="lazy" decoding="async">
-                                </div>
+                            <!-- メイン画像：収録風景 -->
+                            <img src="/assets/images/episode1-main.jpg"
+                                 alt="樋上会長・宿本局長 収録風景"
+                                 class="w-full h-full object-cover"
+                                 style="object-position: 15% center;"
+                                 loading="lazy" decoding="async">
+                            <!-- サブ画像：記念撮影（右上に重ねて配置） -->
+                            <div class="absolute top-4 right-4 w-28 h-20 md:w-36 md:h-24">
+                                <img src="/assets/images/episode1-sub.jpg"
+                                     alt="樋上会長・宿本局長 記念撮影"
+                                     class="w-full h-full object-contain bg-white rounded-lg shadow-lg border-2 border-white"
+                                     loading="lazy" decoding="async">
                             </div>
-                            <!-- 再生ボタン（常時表示） -->
-                            <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                                <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl hover:scale-110 transition-transform cursor-pointer">
-                                    <svg class="w-8 h-8 text-accent-500 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <!-- 再生ボタン（ホバー時のみ表示） -->
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
+                                    <svg class="w-6 h-6 text-accent-500 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M8 5v14l11-7z"/>
                                     </svg>
                                 </div>
