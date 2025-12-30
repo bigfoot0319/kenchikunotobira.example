@@ -1922,13 +1922,27 @@
             });
         }
 
-        // ウェルカムポップアップ（ヒーローセクションに来るたびに表示）
+        // ウェルカムポップアップ（1回閲覧したら再表示しない、期限付き）
         const welcomePopup = document.getElementById('welcome-popup');
         const closePopupBtn = document.getElementById('close-popup');
         const closePopupBtnBottom = document.getElementById('close-popup-btn');
         const popupContent = welcomePopup.querySelector('div');
-        const heroSection = document.getElementById('hero');
-        let popupShownThisSession = false;
+
+        // ポップアップ表示の条件判定
+        const POPUP_STORAGE_KEY = 'welcomePopupSeen';
+        const POPUP_EXPIRY_DATE = new Date('2026-01-04T13:00:00+09:00'); // 2026年1月4日13:00 JST
+
+        function shouldShowPopup() {
+            // 期限切れチェック（2026年1月4日13:00 JST以降は表示しない）
+            if (new Date() >= POPUP_EXPIRY_DATE) {
+                return false;
+            }
+            // 既に閲覧済みかチェック
+            if (localStorage.getItem(POPUP_STORAGE_KEY)) {
+                return false;
+            }
+            return true;
+        }
 
         // ポップアップを表示する関数
         function showWelcomePopup() {
@@ -1944,28 +1958,15 @@
             welcomePopup.classList.remove('opacity-100');
             popupContent.classList.add('scale-95');
             popupContent.classList.remove('scale-100');
-            popupShownThisSession = true;
+            // 閲覧済みフラグをlocalStorageに保存
+            localStorage.setItem(POPUP_STORAGE_KEY, 'true');
         }
 
-        // ページ読み込み時に1秒遅延して表示
-        setTimeout(() => {
-            showWelcomePopup();
-        }, 1000);
-
-        // ヒーローセクションが表示されたらポップアップを再表示
-        const heroObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && popupShownThisSession) {
-                    popupShownThisSession = false;
-                    setTimeout(() => {
-                        showWelcomePopup();
-                    }, 500);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        if (heroSection) {
-            heroObserver.observe(heroSection);
+        // ページ読み込み時に条件を満たせば1秒遅延して表示
+        if (shouldShowPopup()) {
+            setTimeout(() => {
+                showWelcomePopup();
+            }, 1000);
         }
 
         // 閉じるボタン（×）
