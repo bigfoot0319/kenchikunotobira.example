@@ -1887,29 +1887,31 @@
         const contactForm = document.getElementById('contact-form');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
                 // フォームのバリデーション
                 const formData = new FormData(contactForm);
                 let isValid = true;
 
-                // 必須項目のチェック
-                const requiredFields = ['name', 'email', 'subject', 'message'];
+                // 必須項目のチェック（name属性は日本語、idは英語）
+                const requiredFields = [
+                    { name: 'お名前', id: 'name' },
+                    { name: 'メールアドレス', id: 'email' },
+                    { name: 'お問い合わせ種別', id: 'subject' },
+                    { name: 'お問い合わせ内容', id: 'message' }
+                ];
                 requiredFields.forEach(field => {
-                    if (!formData.get(field)) {
+                    if (!formData.get(field.name)) {
                         isValid = false;
-                        document.getElementById(field).classList.add('border-red-500');
+                        document.getElementById(field.id).classList.add('border-red-500');
                     } else {
-                        document.getElementById(field).classList.remove('border-red-500');
+                        document.getElementById(field.id).classList.remove('border-red-500');
                     }
                 });
 
-                if (isValid) {
-                    // 実際の実装では、ここでサーバーに送信
-                    alert('お問い合わせを受け付けました。\n返信まで数日お待ちください。');
-                    contactForm.reset();
-                } else {
+                if (!isValid) {
+                    e.preventDefault();
                     alert('必須項目をすべて入力してください。');
                 }
+                // バリデーション成功時はSSGFormに送信される
             });
         }
 
