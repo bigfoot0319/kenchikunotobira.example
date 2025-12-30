@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせありがとうございます - 建築のトビラ</title>
+    <meta name="description" content="お問い合わせを受け付けました。建築のトビラへのお問い合わせありがとうございます。">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- ファビコン -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <!-- フォント: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4.1 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // ライトグレー系（明るいベース）
+                        'primary': {
+                            50: '#ffffff',
+                            100: '#fafafa',
+                            200: '#f5f5f5',
+                            300: '#e5e5e5',
+                            400: '#d4d4d4',
+                            500: '#a3a3a3',
+                            600: '#737373',
+                            700: '#525252',
+                            800: '#404040',
+                            900: '#262626',
+                        },
+                        // オレンジ/コーラル（アクセント）
+                        'accent': {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        },
+                        // コーラルピンク（グラデーション用）
+                        'coral': {
+                            400: '#f87171',
+                            500: '#ef4444',
+                            600: '#dc2626',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Noto Sans JP', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Animate.css v4.1.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans bg-primary-100 text-primary-800 min-h-screen flex flex-col">
+
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <a href="/" class="flex items-center gap-3">
+                <img src="/assets/images/logo.png" alt="建築のトビラ" class="h-10 w-auto" loading="lazy" decoding="async">
+                <span class="text-xl font-bold text-primary-800">建築のトビラ</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="flex-grow flex items-center justify-center px-4 py-16">
+        <div class="max-w-xl w-full text-center">
+            <!-- サンキューカード -->
+            <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12 border border-primary-200 animate__animated animate__fadeInUp">
+                <!-- チェックアイコン -->
+                <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-accent-500 to-coral-500 rounded-full flex items-center justify-center">
+                    <i data-lucide="check" class="w-10 h-10 text-white"></i>
+                </div>
+
+                <h1 class="text-2xl lg:text-3xl font-bold text-primary-800 mb-4">
+                    お問い合わせありがとうございます
+                </h1>
+
+                <p class="text-primary-600 mb-8 leading-relaxed">
+                    お問い合わせを受け付けました。<br>
+                    内容を確認の上、担当者より折り返しご連絡いたします。<br>
+                    <span class="text-sm text-primary-500">（通常2〜3営業日以内にご返信いたします）</span>
+                </p>
+
+                <!-- 区切り線 -->
+                <div class="border-t border-primary-200 my-8"></div>
+
+                <!-- 戻るボタン -->
+                <a href="/"
+                   class="inline-flex items-center gap-3 bg-gradient-to-r from-accent-500 to-coral-500 text-white px-8 py-4 rounded-full font-bold hover:from-accent-600 hover:to-coral-600 transition-all shadow-lg hover:shadow-xl">
+                    <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    トップページに戻る
+                </a>
+
+                <p class="mt-6 text-sm text-primary-500">
+                    <i data-lucide="home" class="w-4 h-4 inline-block mr-1"></i>
+                    建築のトビラ公式サイトへ戻ります
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-primary-900 text-primary-300 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 建築のトビラ All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons 初期化 -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
