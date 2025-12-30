@@ -642,21 +642,31 @@
 
             <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <!-- ラジオ -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-accent-500/20 transition-all hover:-translate-y-2 border border-primary-200" data-aos="zoom-in">
-                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div id="radio-listen-btn" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-accent-500/20 transition-all hover:-translate-y-2 border border-primary-200 cursor-pointer group" data-aos="zoom-in">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-accent-200 transition-colors">
+                        <svg class="w-8 h-8 text-accent-500 group-hover:text-accent-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-center text-primary-800 mb-4">ラジオ放送</h3>
+                    <h3 class="text-xl font-bold text-center text-primary-800 mb-4 group-hover:text-accent-600 transition-colors">ラジオ放送</h3>
                     <div class="text-center mb-6">
-                        <p class="text-2xl font-bold text-primary-800 mb-2">毎週日曜</p>
+                        <p class="text-2xl font-bold text-primary-800 mb-2 group-hover:text-accent-600 transition-colors">毎週日曜</p>
                         <p class="text-xl text-primary-600">11:00〜11:55</p>
                     </div>
-                    <div class="bg-accent-50 rounded-xl p-4">
+                    <div class="bg-accent-50 rounded-xl p-4 group-hover:bg-accent-100 transition-colors">
                         <p class="text-sm font-bold text-primary-800 mb-2">ミュージックバード配信</p>
-                        <p class="text-sm text-primary-600">全国97局のコミュニティFMで放送</p>
+                        <p class="text-sm text-primary-600">全国のコミュニティFMで放送</p>
                     </div>
+                    <!-- クリックして視聴の補足テキスト -->
+                    <p class="text-xs text-accent-500 text-center mt-4 group-hover:text-accent-600 transition-colors">
+                        <span class="inline-flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            クリックして視聴
+                        </span>
+                    </p>
                 </div>
 
                 <!-- Spotify -->
@@ -689,7 +699,7 @@
                 <h2 class="text-4xl font-bold text-primary-800 mb-4">コーナー</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
                 <p class="text-lg text-primary-600 max-w-3xl mx-auto">
-                    番組を構成する3つのコーナーをご紹介します
+                    ラジオ番組を構成する3つのコーナーをご紹介します
                 </p>
             </div>
 
@@ -822,113 +832,6 @@
         </div>
     </section>
 
-    <!-- 放送局一覧 -->
-    <section id="stations" class="py-20 bg-primary-100" data-aos="fade-up">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">放送局一覧</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
-                <p class="text-lg text-primary-600">ミュージックバード 全国97局のコミュニティFMで放送</p>
-            </div>
-
-            <!-- 放送局検索 -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <div class="bg-white rounded-xl shadow-lg p-6 border border-primary-200">
-                    <label class="block text-primary-800 font-bold mb-3">お住まいの地域を選択</label>
-                    <select id="region-select" class="w-full px-4 py-3 bg-primary-50 border border-primary-300 text-primary-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-500">
-                        <option value="">全地域を表示</option>
-                        <option value="hokkaido">北海道</option>
-                        <option value="tohoku">東北</option>
-                        <option value="kanto">関東</option>
-                        <option value="chubu">中部</option>
-                        <option value="kinki">近畿</option>
-                        <option value="chugoku">中国</option>
-                        <option value="shikoku">四国</option>
-                        <option value="kyushu">九州・沖縄</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- 放送局リスト -->
-            <div class="grid lg:grid-cols-3 gap-6">
-                <!-- 関東エリア -->
-                <div class="bg-white rounded-xl shadow-lg p-6 station-region border border-primary-200" data-region="kanto">
-                    <h3 class="text-lg font-bold text-primary-800 mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
-                        関東エリア
-                    </h3>
-                    <div class="station-list space-y-2">
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM世田谷（東京都）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• かつしかFM（東京都）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM江戸川（東京都）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• 調布FM（東京都）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• 西東京FM（東京都）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM八王子（東京都）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMサルース（神奈川県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM湘南ナパサ（神奈川県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• レディオ湘南（神奈川県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM浦和（埼玉県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• REDS WAVE（埼玉県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• 市川うららFM（千葉県）</div>
-                    </div>
-                </div>
-
-                <!-- 近畿エリア -->
-                <div class="bg-white rounded-xl shadow-lg p-6 station-region border border-primary-200" data-region="kinki">
-                    <h3 class="text-lg font-bold text-primary-800 mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
-                        近畿エリア
-                    </h3>
-                    <div class="station-list space-y-2">
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM千里（大阪府）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMひらかた（大阪府）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM HANAKO（大阪府）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• みのおエフエム（大阪府）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMいたみ（兵庫県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• さくらFM（兵庫県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM宝塚（兵庫県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• ハミングFM宝塚（兵庫県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• 京都三条ラジオカフェ（京都府）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMうじ（京都府）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• ならどっとFM（奈良県）</div>
-                    </div>
-                </div>
-
-                <!-- その他エリア -->
-                <div class="bg-white rounded-xl shadow-lg p-6 border border-primary-200">
-                    <h3 class="text-lg font-bold text-primary-800 mb-4 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
-                        </svg>
-                        その他の主要局
-                    </h3>
-                    <div class="station-list space-y-2">
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMいるか（北海道）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• ラジオ石巻（宮城県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMぜんこうじ（長野県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• Radio80（岐阜県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• COAST-FM（静岡県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• エフエムななみ（愛知県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMくらしき（岡山県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMちゅーピー（広島県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• COME ON! FM（山口県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM高松（香川県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FM KITAQ（福岡県）</div>
-                        <div class="text-sm text-primary-600 hover:text-accent-500 cursor-pointer">• FMやんばる（沖縄県）</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-12 text-center">
-                <p class="text-primary-500">※上記は一部の放送局です。全97局の詳細は放送開始後に掲載予定です。</p>
-            </div>
-        </div>
-    </section>
-
     <!-- 番組について -->
     <section id="about" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
@@ -992,11 +895,11 @@
         </div>
     </section>
 
-    <!-- 番組の5つの柱 -->
+    <!-- 発信の5つの柱 -->
     <section id="pillars" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">番組の5つの柱</h2>
+                <h2 class="text-4xl font-bold text-primary-800 mb-4">発信の5つの柱</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto mb-6"></div>
                 <p class="text-lg text-primary-600 max-w-3xl mx-auto">
                     建築業界の「今」と「未来」を5つの視点から多角的に描き出します
@@ -1076,7 +979,7 @@
     <section id="association" class="py-20 bg-primary-100" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">Presents</h2>
+                <h2 class="text-4xl font-bold text-primary-800 mb-4">Presented by</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto"></div>
             </div>
 
@@ -1149,16 +1052,16 @@
         </div>
     </section>
 
-    <!-- 大阪府建築士事務所協会 会員 -->
+    <!-- Special Thanks -->
     <section id="sponsors" class="py-20 bg-white" data-aos="fade-up">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-primary-800 mb-4">大阪府建築士事務所協会 会員</h2>
+                <h2 class="text-4xl font-bold text-primary-800 mb-4">Special Thanks</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-accent-500 to-coral-500 mx-auto"></div>
             </div>
 
-            <!-- 大サイズ（10枠） -->
-            <div class="mb-10">
+            <!-- 大サイズ（4枠） -->
+            <div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
                     <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
                         <span class="text-primary-400 text-lg font-medium">Coming soon</span>
@@ -1171,156 +1074,6 @@
                     </div>
                     <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
                         <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-64 bg-primary-100 rounded-xl border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-lg font-medium">Coming soon</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 中サイズ（20枠） -->
-            <div class="mb-10">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-16 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-sm font-medium">Coming soon</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 小サイズ（20枠） -->
-            <div>
-                <div class="grid grid-cols-3 md:grid-cols-5 gap-2 max-w-5xl mx-auto">
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
-                    </div>
-                    <div class="h-12 bg-primary-100 rounded-lg border-2 border-dashed border-primary-300 flex items-center justify-center">
-                        <span class="text-primary-400 text-xs font-medium">Coming soon</span>
                     </div>
                 </div>
             </div>
@@ -1447,6 +1200,47 @@
         </div>
     </section>
 
+    <!-- ラジオ視聴モーダル -->
+    <div id="radio-modal" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- オーバーレイ -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- モーダルコンテンツ -->
+        <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 transform scale-95 transition-transform duration-300">
+            <!-- 閉じるボタン -->
+            <button id="close-radio-modal" class="absolute top-4 right-4 w-10 h-10 bg-primary-100 hover:bg-primary-200 rounded-full flex items-center justify-center transition-colors z-10">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <!-- モーダルヘッダー -->
+            <div class="p-6 border-b border-primary-100">
+                <h3 class="text-2xl font-bold text-primary-800 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-accent-100 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                    </span>
+                    「建築のトビラ」をライブで聴く
+                </h3>
+                <p class="text-primary-600 mt-2 ml-13">FM千里（83.7MHz）で毎週日曜 11:00〜11:55 放送中</p>
+            </div>
+            <!-- モーダルボディ -->
+            <div class="p-6">
+                <div class="bg-primary-50 rounded-xl overflow-hidden">
+                    <iframe
+                        id="radio-iframe"
+                        src=""
+                        class="w-full h-[450px] border-0"
+                        title="FM千里 ライブ配信"
+                    ></iframe>
+                </div>
+                <p class="text-xs text-primary-500 mt-4 text-center">
+                    ※放送時間外は別の番組が流れています。毎週日曜 11:00〜11:55 に「建築のトビラ」をお聴きいただけます。
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- フッター -->
     <footer class="bg-primary-800 text-white py-12 border-t border-primary-700">
         <div class="container mx-auto px-4">
@@ -1477,7 +1271,7 @@
 
                 <!-- Presents -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4 text-white">Presents</h4>
+                    <h4 class="text-lg font-bold mb-4 text-white">Presented by</h4>
                     <p class="text-primary-300 text-sm mb-2">一般社団法人 大阪府建築士事務所協会</p>
                     <p class="text-primary-300 text-sm mb-4">設立50周年記念事業</p>
                     <a href="https://www.oaaf.or.jp/" target="_blank" rel="noopener noreferrer"
@@ -1743,6 +1537,54 @@
         if (formLoadedAtField) {
             formLoadedAtField.value = Date.now();
         }
+
+        // ラジオ視聴モーダル
+        const radioListenBtn = document.getElementById('radio-listen-btn');
+        const radioModal = document.getElementById('radio-modal');
+        const closeRadioModalBtn = document.getElementById('close-radio-modal');
+        const radioModalContent = radioModal.querySelector('.relative');
+        const radioIframe = document.getElementById('radio-iframe');
+        const radioStreamUrl = 'https://www.jcbasimul.com/fmsenri';
+
+        // モーダルを開く関数
+        function openRadioModal() {
+            radioIframe.src = radioStreamUrl; // srcを設定して再生開始
+            radioModal.classList.remove('opacity-0', 'pointer-events-none');
+            radioModal.classList.add('opacity-100');
+            radioModalContent.classList.remove('scale-95');
+            radioModalContent.classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // モーダルを閉じる関数
+        function closeRadioModal() {
+            radioIframe.src = ''; // srcを空にして再生停止
+            radioModal.classList.add('opacity-0', 'pointer-events-none');
+            radioModal.classList.remove('opacity-100');
+            radioModalContent.classList.add('scale-95');
+            radioModalContent.classList.remove('scale-100');
+            document.body.style.overflow = '';
+        }
+
+        // ラジオカードクリックでモーダルを開く
+        radioListenBtn.addEventListener('click', openRadioModal);
+
+        // 閉じるボタンクリック
+        closeRadioModalBtn.addEventListener('click', closeRadioModal);
+
+        // オーバーレイクリックで閉じる
+        radioModal.addEventListener('click', (e) => {
+            if (e.target === radioModal || e.target.classList.contains('bg-black/60')) {
+                closeRadioModal();
+            }
+        });
+
+        // ESCキーでラジオモーダルも閉じる
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !radioModal.classList.contains('opacity-0')) {
+                closeRadioModal();
+            }
+        });
     </script>
 </body>
 </html>
