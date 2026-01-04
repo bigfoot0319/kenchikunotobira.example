@@ -419,7 +419,7 @@
                 <h3 class="text-lg font-bold text-primary-700 mb-4">エピソード</h3>
                 <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
                     <!-- EP.1（特別編） -->
-                    <div class="flex-shrink-0 w-80 snap-start">
+                    <div id="ep1-listen-btn" class="flex-shrink-0 w-80 snap-start cursor-pointer">
                         <div class="bg-white rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow">
                             <div class="relative h-40">
                                 <img src="/assets/images/episode1-main.jpg"
@@ -427,14 +427,14 @@
                                      class="w-full h-full object-cover"
                                      style="object-position: 15% center;"
                                      loading="lazy" decoding="async">
-                                <a href="https://open.spotify.com/episode/5cBH5FQq8FfCBTOSSv5Kah?si=EOacZGMSQ0yeGl412C71Wg" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                     <div class="w-12 h-12 bg-[#1DB954] rounded-full flex items-center justify-center shadow-lg">
                                         <!-- Spotify icon -->
                                         <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
                                             <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
                                         </svg>
                                     </div>
-                                </a>
+                                </div>
                                 <div class="absolute top-2 left-2 bg-accent-500 text-white text-xs px-2 py-0.5 rounded font-medium">
                                     EP.1 特別編
                                 </div>
@@ -1318,6 +1318,46 @@
         </div>
     </div>
 
+    <!-- EP.1視聴モーダル -->
+    <div id="ep1-modal" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+        <!-- オーバーレイ -->
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- モーダルコンテンツ -->
+        <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl mx-4 transform scale-95 transition-transform duration-300">
+            <!-- 閉じるボタン -->
+            <button id="close-ep1-modal" class="absolute top-4 right-4 w-10 h-10 bg-primary-100 hover:bg-primary-200 rounded-full flex items-center justify-center transition-colors z-10">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <!-- モーダルヘッダー -->
+            <div class="p-6 border-b border-primary-100">
+                <h3 class="text-2xl font-bold text-primary-800 flex items-center gap-3">
+                    <span class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                        </svg>
+                    </span>
+                    EP.1 特別編
+                </h3>
+                <p class="text-primary-600 mt-2 ml-13">建築業界の未来〜地域と国が目指すもの</p>
+            </div>
+            <!-- モーダルボディ -->
+            <div class="p-6">
+                <div class="bg-primary-50 rounded-xl overflow-hidden">
+                    <iframe
+                        id="ep1-iframe"
+                        src=""
+                        class="w-full h-[352px] border-0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                        title="Spotify - EP.1 特別編"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- フッター -->
     <footer class="bg-primary-800 text-white py-12 border-t border-primary-700">
         <div class="container mx-auto px-4">
@@ -1661,6 +1701,54 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !radioModal.classList.contains('opacity-0')) {
                 closeRadioModal();
+            }
+        });
+
+        // EP.1視聴モーダル
+        const ep1ListenBtn = document.getElementById('ep1-listen-btn');
+        const ep1Modal = document.getElementById('ep1-modal');
+        const closeEp1ModalBtn = document.getElementById('close-ep1-modal');
+        const ep1ModalContent = ep1Modal.querySelector('.relative');
+        const ep1Iframe = document.getElementById('ep1-iframe');
+        const ep1EmbedUrl = 'https://open.spotify.com/embed/episode/5cBH5FQq8FfCBTOSSv5Kah?utm_source=generator&theme=0';
+
+        // EP.1モーダルを開く関数
+        function openEp1Modal() {
+            ep1Iframe.src = ep1EmbedUrl;
+            ep1Modal.classList.remove('opacity-0', 'pointer-events-none');
+            ep1Modal.classList.add('opacity-100');
+            ep1ModalContent.classList.remove('scale-95');
+            ep1ModalContent.classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // EP.1モーダルを閉じる関数
+        function closeEp1Modal() {
+            ep1Iframe.src = '';
+            ep1Modal.classList.add('opacity-0', 'pointer-events-none');
+            ep1Modal.classList.remove('opacity-100');
+            ep1ModalContent.classList.add('scale-95');
+            ep1ModalContent.classList.remove('scale-100');
+            document.body.style.overflow = '';
+        }
+
+        // EP.1カードクリックでモーダルを開く
+        ep1ListenBtn.addEventListener('click', openEp1Modal);
+
+        // 閉じるボタンクリック
+        closeEp1ModalBtn.addEventListener('click', closeEp1Modal);
+
+        // オーバーレイクリックで閉じる
+        ep1Modal.addEventListener('click', (e) => {
+            if (e.target === ep1Modal || e.target.classList.contains('bg-black/60')) {
+                closeEp1Modal();
+            }
+        });
+
+        // ESCキーでEP.1モーダルも閉じる
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !ep1Modal.classList.contains('opacity-0')) {
+                closeEp1Modal();
             }
         });
     </script>
