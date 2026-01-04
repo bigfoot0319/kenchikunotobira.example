@@ -368,10 +368,12 @@
                 <div class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-shadow max-w-4xl mx-auto">
                     <div class="md:flex">
                         <!-- サムネイル -->
-                        <div class="relative md:w-1/2 h-56 md:h-auto min-h-[14rem] bg-gradient-to-br from-coral-400 to-amber-500">
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <span class="text-white/70 text-lg font-medium">Coming soon</span>
-                            </div>
+                        <div class="relative md:w-1/2 h-56 md:h-auto min-h-[14rem]">
+                            <img src="/assets/images/episode2-sano.jpg"
+                                 alt="佐野吉彦氏 収録風景"
+                                 class="w-full h-full object-cover"
+                                 style="object-position: center center;"
+                                 loading="lazy" decoding="async">
                             <!-- 再生ボタン（ホバー時のみ表示） -->
                             <a href="#broadcast" class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                 <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
@@ -391,9 +393,14 @@
                         </div>
                         <!-- 情報 -->
                         <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
-                            <div class="text-accent-500 text-sm font-bold mb-2">準備中</div>
-                            <h3 class="text-xl md:text-2xl font-bold text-primary-800 mb-3">次回エピソード準備中</h3>
-                            <p class="text-primary-500 mb-4 leading-relaxed text-xs md:text-sm">次回のエピソードをお楽しみに！建築業界の最前線で活躍するゲストをお迎えしてお届けします。</p>
+                            <div class="text-accent-500 text-sm font-bold mb-2">1月11日(日) 11:00〜</div>
+                            <h3 class="text-xl md:text-2xl font-bold text-primary-800 mb-3">建築と音楽の素敵な関係</h3>
+                            <div class="mb-3">
+                                <p class="text-primary-700 font-semibold"><span class="text-accent-600">●</span> 佐野 吉彦 氏</p>
+                                <p class="text-primary-500 text-xs ml-4">株式会社安井建築設計事務所 代表取締役社長</p>
+                                <p class="text-primary-500 text-xs ml-4">大阪府建築士事務所協会 名誉会長</p>
+                            </div>
+                            <p class="text-primary-500 mb-4 leading-relaxed text-xs md:text-sm line-clamp-4 md:line-clamp-none">サントリーホール、東京国立博物館、大阪国際空港ターミナルビル——日本を代表する建築を手がける安井建築設計事務所。2024年に創業100周年を迎えた同事務所の代表・佐野吉彦氏をお迎えします。「建築家も音楽家も、生涯が現役」——音楽が生まれる「場」としての建築、そして二つの芸術への深い愛を語ります。</p>
                             <div class="flex items-center gap-4">
                                 <div class="flex items-center text-primary-500 gap-1">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -664,24 +671,32 @@
                 </div>
 
                 <!-- Spotify -->
-                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all hover:-translate-y-2 border border-primary-200" data-aos="zoom-in" data-aos-delay="100">
-                    <p class="text-sm font-bold text-green-600 text-center mb-4">アーカイブを聴く</p>
-                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                <a href="https://open.spotify.com/show/0LQLJrw72wP60CCCU1XKeR?si=3aa5b2239024424a" target="_blank" rel="noopener noreferrer" class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all hover:-translate-y-2 border border-primary-200 block group" data-aos="zoom-in" data-aos-delay="100">
+                    <p class="text-sm font-bold text-green-600 text-center mb-4 group-hover:text-green-500 transition-colors">アーカイブを聴く</p>
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-green-200 transition-colors">
+                        <svg class="w-8 h-8 text-green-600 group-hover:text-green-500 transition-colors" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-center text-primary-800 mb-4">Spotify</h3>
+                    <h3 class="text-xl font-bold text-center text-primary-800 mb-4 group-hover:text-green-600 transition-colors">Spotify</h3>
                     <div class="text-center mb-6">
-                        <p class="text-lg text-primary-700 mb-2">ポッドキャスト配信</p>
-                        <p class="text-sm text-primary-500">いつでもどこでも視聴可能</p>
+                        <p class="text-2xl font-bold text-primary-800 mb-2 group-hover:text-green-600 transition-colors">いつでも</p>
+                        <p class="text-xl text-primary-600">どこでも視聴可能</p>
                     </div>
-                    <div class="text-center">
-                        <button class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-500 transition" disabled>
-                            準備中
-                        </button>
+                    <div class="bg-green-50 rounded-xl p-4 group-hover:bg-green-100 transition-colors">
+                        <p class="text-sm font-bold text-primary-800 mb-2">ポッドキャスト配信</p>
+                        <p class="text-sm text-primary-600">過去のエピソードも聴ける</p>
                     </div>
-                </div>
+                    <p class="text-xs text-green-600 text-center mt-4 group-hover:text-green-500 transition-colors">
+                        <span class="inline-flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            クリックして視聴
+                        </span>
+                    </p>
+                </a>
             </div>
 
         </div>
@@ -700,37 +715,57 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- メイントーク -->
-                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all border border-primary-200" data-aos="fade-up">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                            </svg>
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all border border-primary-200 overflow-hidden" data-aos="fade-up">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                                </svg>
+                            </div>
+                            <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-medium">人</span>
                         </div>
-                        <span class="text-xs bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-medium">人</span>
+                        <h3 class="text-xl font-bold text-primary-800 mb-3">メイントーク</h3>
+                        <p class="text-sm text-primary-500 font-medium mb-3">建築の最前線にいる「人」の声を届ける</p>
+                        <p class="text-primary-600 leading-relaxed text-sm">
+                            番組のメインコーナー。建築家、構造設計者、施工管理者、職人、経営者、研究者——。立場は違えど、「建築」という仕事に人生を賭けてきた人たちの「歩んできた道」と「これから描く未来」をじっくりお聴きします。
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-primary-800 mb-3">メイントーク</h3>
-                    <p class="text-sm text-primary-500 font-medium mb-3">建築の最前線にいる「人」の声を届ける</p>
-                    <p class="text-primary-600 leading-relaxed text-sm">
-                        番組のメインコーナー。建築家、構造設計者、施工管理者、職人、経営者、研究者——。立場は違えど、「建築」という仕事に人生を賭けてきた人たちの「歩んできた道」と「これから描く未来」をじっくりお聴きします。
-                    </p>
+                    <!-- 写真 -->
+                    <div class="relative h-36 overflow-hidden">
+                        <img src="/assets/images/episode1-main.jpg"
+                             alt="メイントーク収録風景"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             style="object-position: 15% center;"
+                             loading="lazy" decoding="async">
+                    </div>
                 </div>
 
                 <!-- 匠と美穂の建築さんぽ -->
-                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:shadow-teal-500/20 transition-all border border-primary-200" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-16 h-16 bg-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                            </svg>
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-teal-500/20 transition-all border border-primary-200 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-teal-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                </svg>
+                            </div>
+                            <span class="text-xs bg-teal-100 text-teal-600 px-3 py-1 rounded-full font-medium">建築物</span>
                         </div>
-                        <span class="text-xs bg-teal-100 text-teal-600 px-3 py-1 rounded-full font-medium">建築物</span>
+                        <h3 class="text-xl font-bold text-primary-800 mb-3">匠と美穂の建築さんぽ</h3>
+                        <p class="text-sm text-primary-500 font-medium mb-3">親子の目線で街を歩けば、建築はもっとおもしろい</p>
+                        <p class="text-primary-600 leading-relaxed text-sm">
+                            建築好きの母「美穂」と、将来建築士を目指す中学生の息子「匠」。母の「好奇心」と息子の「素直な感動・疑問」が交差することで、専門知識がなくても楽しめる建築紹介を実現します。
+                        </p>
                     </div>
-                    <h3 class="text-xl font-bold text-primary-800 mb-3">匠と美穂の建築さんぽ</h3>
-                    <p class="text-sm text-primary-500 font-medium mb-3">親子の目線で街を歩けば、建築はもっとおもしろい</p>
-                    <p class="text-primary-600 leading-relaxed text-sm">
-                        一級建築士の母「美穂」と、将来建築士を目指す中学生の息子「匠」。母の「プロの視点」と息子の「素直な感動・疑問」が交差することで、専門知識がなくても楽しめる建築紹介を実現します。
-                    </p>
+                    <!-- 写真 -->
+                    <div class="relative h-36 overflow-hidden">
+                        <img src="/assets/images/corner-sanpo.png"
+                             alt="匠と美穂の建築さんぽ"
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                             loading="lazy" decoding="async">
+                        <span class="absolute top-2 left-2 text-[10px] text-white/80 bg-black/40 px-1.5 py-0.5 rounded">この写真はAI生成です。</span>
+                    </div>
                 </div>
 
                 <!-- 扉をひらいた日 -->
