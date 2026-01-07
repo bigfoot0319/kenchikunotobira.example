@@ -151,14 +151,6 @@
             transform: rotateY(-25deg);
         }
 
-        /* カウントダウンのスタイル */
-        .countdown-item {
-            background: linear-gradient(135deg, #171717 0%, #404040 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         /* 放送局リストのスクロール */
         .station-list {
             max-height: 400px;
@@ -308,32 +300,6 @@
                           animate__animated animate__fadeInUp animate__delay-1s">
                     建築と人をつなぐ、情報発信プラットフォーム
                 </p>
-
-                <!-- カウントダウンタイマー -->
-                <div class="mb-12 animate__animated animate__fadeInUp animate__delay-2s">
-                    <p class="text-xl lg:text-2xl font-bold mb-4
-                              bg-gradient-to-r from-accent-500 to-coral-500 bg-clip-text text-transparent">
-                        ラジオ放送開始まで
-                    </p>
-                    <div id="countdown" class="flex justify-center space-x-4 lg:space-x-8">
-                        <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                            <div class="countdown-item text-4xl lg:text-5xl font-bold bg-gradient-to-r from-accent-500 to-coral-500 bg-clip-text text-transparent" id="days">00</div>
-                            <p class="text-sm text-primary-600 mt-2">日</p>
-                        </div>
-                        <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                            <div class="countdown-item text-4xl lg:text-5xl font-bold bg-gradient-to-r from-accent-500 to-coral-500 bg-clip-text text-transparent" id="hours">00</div>
-                            <p class="text-sm text-primary-600 mt-2">時間</p>
-                        </div>
-                        <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                            <div class="countdown-item text-4xl lg:text-5xl font-bold bg-gradient-to-r from-accent-500 to-coral-500 bg-clip-text text-transparent" id="minutes">00</div>
-                            <p class="text-sm text-primary-600 mt-2">分</p>
-                        </div>
-                        <div class="text-center bg-white/80 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg">
-                            <div class="countdown-item text-4xl lg:text-5xl font-bold bg-gradient-to-r from-accent-500 to-coral-500 bg-clip-text text-transparent" id="seconds">00</div>
-                            <p class="text-sm text-primary-600 mt-2">秒</p>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- 放送情報 -->
                 <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto border border-accent-100 animate__animated animate__fadeInUp animate__delay-3s">
@@ -1425,31 +1391,6 @@
 
         // Lucideアイコン初期化
         lucide.createIcons();
-
-        // カウントダウンタイマー
-        function updateCountdown() {
-            const targetDate = new Date('2026-01-04T11:00:00+09:00');
-            const now = new Date();
-            const difference = targetDate - now;
-
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-            } else {
-                document.getElementById('countdown').innerHTML = '<p class="text-2xl font-bold text-accent-600">放送中！</p>';
-            }
-        }
-
-        // カウントダウン更新
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
 
         // ナビゲーションのスクロール処理
         const navbar = document.getElementById('navbar');
