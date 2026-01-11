@@ -1,0 +1,21 @@
+{
+    "name": "建築のトビラ",
+    "short_name": "建築のトビラ",
+    "description": "建築と人をつなぐ情報発信プラットフォーム。建築業界の声を届けるラジオ番組。",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f97316",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
