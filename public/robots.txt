@@ -1,0 +1,10 @@
+# robots.txt for kenchiku-tobira.com
+
+User-agent: *
+Allow: /
+
+# Disallow thank you page (noindex)
+Disallow: /thankyou.html
+
+# Sitemap location
+Sitemap: https://kenchiku-tobira.com/sitemap.xml
