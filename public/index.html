@@ -7,21 +7,32 @@
     <meta name="description" content="建築のトビラは、建築の最前線にいる「人」の声を届けるラジオ番組です。2026年1月4日より毎週日曜11:00〜11:55放送。ミュージックバード、Spotify、YouTubeで配信。">
     <meta name="keywords" content="建築のトビラ,ラジオ番組,建築,建築士,大阪府建築士事務所協会,田中知子,ミュージックバード,Spotify,YouTube">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kenchiku-tobira.com/">
+
+    <!-- robots -->
+    <meta name="robots" content="index, follow">
+
     <!-- OGP設定 -->
     <meta property="og:title" content="建築のトビラ - 建築と人をつなぐ、情報発信プラットフォームラジオ番組">
     <meta property="og:description" content="建築の最前線にいる「人」の声を届けるラジオ番組。2026年1月4日より毎週日曜11:00〜11:55放送。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kenchikunotobira.example.jp">
-    <meta property="og:image" content="https://kenchikunotobira.example.jp/assets/images/ogp.jpg">
+    <meta property="og:url" content="https://kenchiku-tobira.com/">
+    <meta property="og:image" content="https://kenchiku-tobira.com/assets/images/ogp.jpg">
     <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="建築のトビラ">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="建築のトビラ - 建築と人をつなぐ、情報発信プラットフォームラジオ番組">
     <meta name="twitter:description" content="建築の最前線にいる「人」の声を届けるラジオ番組。2026年1月4日より放送開始。">
+    <meta name="twitter:image" content="https://kenchiku-tobira.com/assets/images/ogp.jpg">
+    <meta name="twitter:site" content="@kenchiku_tobira">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
+    <!-- Apple Touch Icon（※180x180pxのapple-touch-icon.pngを作成する必要があります） -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- フォント: Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -175,9 +186,30 @@
         .station-list::-webkit-scrollbar-thumb:hover {
             background: #171717;
         }
+
+        /* スキップリンク（アクセシビリティ） */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #262626;
+            color: #fff;
+            padding: 8px 16px;
+            z-index: 1000;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 0 0 8px 0;
+            transition: top 0.3s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
+
+    <!-- スキップリンク（アクセシビリティ） -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
     <!-- 初回訪問ポップアップ -->
     <div id="welcome-popup" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-500 pointer-events-none">
@@ -222,7 +254,8 @@
     </div>
 
     <!-- ナビゲーション -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 nav-transparent">
+    <header>
+    <nav id="navbar" class="fixed top-0 w-full z-50 nav-transparent" aria-label="メインナビゲーション">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center h-16 lg:h-20">
                 <!-- ロゴ -->
@@ -265,6 +298,10 @@
             </div>
         </div>
     </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main id="main-content">
 
     <!-- ヒーローセクション -->
     <section id="hero" class="min-h-screen relative flex items-center justify-center overflow-hidden">
@@ -879,6 +916,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
                 <!-- X（旧Twitter） -->
                 <a href="https://x.com/kenchiku_tobira" target="_blank" rel="noopener noreferrer"
+                   aria-label="X（旧Twitter）で建築のトビラをフォロー"
                    class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-primary-200 text-center" data-aos="fade-up" data-aos-delay="0">
                     <div class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -891,6 +929,7 @@
 
                 <!-- Instagram -->
                 <a href="https://www.instagram.com/kenchiku_tobira/" target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagramで建築のトビラをフォロー"
                    class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-primary-200 text-center" data-aos="fade-up" data-aos-delay="50">
                     <div class="w-16 h-16 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -903,6 +942,7 @@
 
                 <!-- YouTube -->
                 <a href="#" target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTubeで建築のトビラを視聴"
                    class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-primary-200 text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -915,6 +955,7 @@
 
                 <!-- Podcast（Spotify） -->
                 <a href="https://open.spotify.com/show/2gqomfgadCFTmdLDJOf2EO" target="_blank" rel="noopener noreferrer"
+                   aria-label="Spotifyでポッドキャストを聴く"
                    class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-primary-200 text-center" data-aos="fade-up" data-aos-delay="150">
                     <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -927,6 +968,7 @@
 
                 <!-- note -->
                 <a href="https://note.com/kenchiku_tobira" target="_blank" rel="noopener noreferrer"
+                   aria-label="noteで記事を読む"
                    class="group bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-primary-200 text-center col-span-2 md:col-span-1 md:col-start-2 lg:col-span-1 lg:col-start-auto" data-aos="fade-up" data-aos-delay="200">
                     <div class="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
                         <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
@@ -1375,6 +1417,8 @@
             </div>
         </div>
     </div>
+
+    </main>
 
     <!-- フッター -->
     <footer class="bg-primary-800 text-white py-12 border-t border-primary-700">
@@ -1840,6 +1884,61 @@
                 closeEp3Modal();
             }
         });
+    </script>
+
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://kenchiku-tobira.com/#organization",
+                "name": "建築のトビラ",
+                "url": "https://kenchiku-tobira.com/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://kenchiku-tobira.com/assets/images/logo.png"
+                },
+                "sameAs": [
+                    "https://x.com/kenchiku_tobira",
+                    "https://www.instagram.com/kenchiku_tobira/",
+                    "https://note.com/kenchiku_tobira",
+                    "https://open.spotify.com/show/2gqomfgadCFTmdLDJOf2EO"
+                ],
+                "description": "建築と人をつなぐ情報発信プラットフォーム。全国のコミュニティFMラジオを入口に、建築業界の声を届けます。",
+                "foundingDate": "2026-01-04",
+                "founder": {
+                    "@type": "Organization",
+                    "name": "一般社団法人 大阪府建築士事務所協会"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://kenchiku-tobira.com/#website",
+                "url": "https://kenchiku-tobira.com/",
+                "name": "建築のトビラ",
+                "description": "建築業界の未来を届けるラジオ番組＆情報発信プラットフォーム",
+                "publisher": {
+                    "@id": "https://kenchiku-tobira.com/#organization"
+                },
+                "inLanguage": "ja"
+            },
+            {
+                "@type": "RadioSeries",
+                "@id": "https://kenchiku-tobira.com/#radioseries",
+                "name": "建築のトビラ",
+                "description": "建築の最前線にいる「人」の声を届けるラジオ番組。毎週日曜11:00〜11:55放送。",
+                "url": "https://kenchiku-tobira.com/",
+                "inLanguage": "ja",
+                "genre": "建築・建設",
+                "producer": {
+                    "@type": "Organization",
+                    "name": "一般社団法人 大阪府建築士事務所協会"
+                }
+            }
+        ]
+    }
     </script>
 </body>
 </html>
