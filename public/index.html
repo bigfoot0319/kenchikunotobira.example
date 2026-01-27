@@ -397,12 +397,12 @@
             <!-- エピソード（縦スクロール） -->
             <div class="flex flex-col gap-6">
 
-                <!-- EP.4 次回放送（強調表示） -->
-                <div id="ep4-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
+                <!-- EP.5 次回放送（強調表示） -->
+                <div id="ep5-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
                     <!-- 左: 画像 -->
                     <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
-                        <img src="/assets/images/episode4-tobase.jpg"
-                             alt="鳥羽瀬公二氏 収録風景"
+                        <img src="/assets/images/episode5-ueno.png"
+                             alt="上野浩也氏 収録風景"
                              class="w-full h-full object-contain"
                              loading="lazy" decoding="async">
                         <!-- ホバーオーバーレイ（Spotifyアイコン） -->
@@ -413,15 +413,59 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.4</div>
+                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.5</div>
                     </div>
                     <!-- 右: コンテンツ -->
                     <div class="flex-1 p-4 md:p-5">
                         <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">次回放送</span>
-                        <div class="text-[#FF6B35] text-sm font-bold mb-1">1月25日(土) 11:00〜</div>
+                        <div class="text-[#FF6B35] text-sm font-bold mb-1">2月1日(日) 11:00〜</div>
+                        <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">額に汗してまじめに働く人が報われる業界に</h4>
+                        <div class="mb-2 space-y-0.5">
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 上野 浩也 氏<span class="text-primary-600 text-base font-bold ml-1">（一般社団法人 日本建築士事務所協会連合会 会長）</span></p>
+                        </div>
+                        <p class="text-primary-500 text-sm leading-relaxed mb-3">京都を拠点に、景観規制の厳しい土地でクライアントや設計者の想いを実現する建築コンサルタントとして活躍してきた上野浩也氏。「建築は地図に残る仕事」と語る上野氏が、街に溶け込む建築のあり方、そして業界の未来への想いを語ります。</p>
+                        <div class="flex items-center gap-4 text-primary-500 text-sm">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>55:00</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>2026.02.01</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EP.4 過去エピソード -->
+                <div id="ep4-listen-btn" class="flex flex-col md:flex-row md:items-center bg-white rounded-xl shadow-md overflow-hidden border border-primary-200 hover:shadow-xl cursor-pointer group transition-all">
+                    <!-- 左: 画像 -->
+                    <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0">
+                        <img src="/assets/images/episode4-tobase.jpg"
+                             alt="鳥羽瀬公二氏 収録風景"
+                             class="w-full h-full object-cover"
+                             style="object-position: center 20%;"
+                             loading="lazy" decoding="async">
+                        <!-- ホバーオーバーレイ（Spotifyアイコン） -->
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 bg-[#1DB954] rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-accent-500 text-white text-xs px-2 py-0.5 rounded font-medium">EP.4</div>
+                    </div>
+                    <!-- 右: コンテンツ -->
+                    <div class="flex-1 p-4 md:p-5">
+                        <div class="text-accent-500 text-sm font-bold mb-1">1月25日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">千年の木に、千年の技を 〜 日本伝統建築の保存と課題</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-700 text-sm"><span class="text-[#FF6B35]">●</span> 鳥羽瀬 公二 氏<span class="text-primary-500 text-xs">（宮大工棟梁　株式会社鳥羽瀬社寺建築 代表取締役会長／日本伝統建築技術保存会 会長）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 鳥羽瀬 公二 氏<span class="text-primary-600 text-base font-bold ml-1">（宮大工棟梁　株式会社鳥羽瀬社寺建築 代表取締役会長／日本伝統建築技術保存会 会長）</span></p>
                         </div>
                         <p class="text-primary-500 text-sm leading-relaxed mb-3">東大寺、法隆寺、四天王寺、厳島神社ー約70件の国宝・重要文化財の保存修理に携わってきた宮大工棟梁・鳥羽瀬公二氏。ユネスコ無形文化遺産「伝統建築工匠の技」登録にも尽力した鳥羽瀬氏が、日本の伝統建築を未来へつなぐ使命を語ります。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
@@ -465,7 +509,7 @@
                         <div class="text-accent-500 text-sm font-bold mb-1">1月18日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">盛り場育ちの建築史家 〜 遊び場から世界遺産まで</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-700 text-sm"><span class="text-accent-600">●</span> 橋爪 紳也 氏<span class="text-primary-500 text-xs">（建築史家　大阪公立大学特別教授）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 橋爪 紳也 氏<span class="text-primary-600 text-base font-bold ml-1">（建築史家　大阪公立大学特別教授）</span></p>
                         </div>
                         <p class="text-primary-500 text-sm leading-relaxed mb-3">「生きた建築ミュージアム大阪」理事長として近代建築の魅力を発信し続ける建築史家・橋爪紳也氏。大阪・関西万博にも構想段階から携わる橋爪氏が、著書100冊以上の知見とともに、大阪の街と建築の物語を語ります。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
@@ -509,7 +553,7 @@
                         <div class="text-accent-500 text-sm font-bold mb-1">1月11日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">建築と音楽の素敵な関係</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-700 text-sm"><span class="text-accent-600">●</span> 佐野 吉彦 氏<span class="text-primary-500 text-xs">（株式会社安井建築設計事務所 代表取締役社長）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 佐野 吉彦 氏<span class="text-primary-600 text-base font-bold ml-1">（株式会社安井建築設計事務所 代表取締役社長）</span></p>
                         </div>
                         <p class="text-primary-500 text-sm leading-relaxed mb-3">サントリーホール、東京国立博物館ー日本を代表する建築を手がける安井建築設計事務所の代表・佐野吉彦氏。創業100周年を迎えた老舗設計事務所を率いる佐野氏が、「建築家も音楽家も、生涯が現役」と語る、二つの芸術への深い愛をお届けします。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
@@ -552,8 +596,8 @@
                         <div class="text-accent-500 text-sm font-bold mb-1">1月4日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">建築業界の未来〜地域と国が目指すもの</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-700 text-sm"><span class="text-accent-600">●</span> 宿本 尚吾 氏<span class="text-primary-500 text-xs">（国土交通省 住宅局長）</span></p>
-                            <p class="text-primary-700 text-sm"><span class="text-accent-600">●</span> 樋上 雅博 氏<span class="text-primary-500 text-xs">（一般社団法人大阪府建築士事務所協会 会長）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 宿本 尚吾 氏<span class="text-primary-600 text-base font-bold ml-1">（国土交通省 住宅局長）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 樋上 雅博 氏<span class="text-primary-600 text-base font-bold ml-1">（一般社団法人大阪府建築士事務所協会 会長）</span></p>
                         </div>
                         <p class="text-primary-500 text-sm leading-relaxed mb-3">記念すべき第1回放送は、国の建築行政を担う国土交通省と、地域の建築士事務所協会のトップによる特別対談をお届けします。建築業界への想い、そして次世代へのメッセージまで語ります。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
@@ -862,6 +906,19 @@
                             <div class="flex-1">
                                 <h3 class="font-bold text-primary-800 mb-1">「街は、こんなにも語りかけてくる」─ 甲斐みのりが見つめる、建築と記憶</h3>
                                 <p class="text-primary-500 text-sm">甲斐 みのり 氏（エッセイスト）</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7回 -->
+                    <div class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow border border-primary-200" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row md:items-center gap-2">
+                            <div class="md:w-24 flex-shrink-0">
+                                <span class="bg-accent-500 text-white text-sm font-bold px-3 py-1 rounded">7回</span>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary-800 mb-1">「JOIN」〜建築と言葉、そして人生の出会いを紡ぐ〜</h3>
+                                <p class="text-primary-500 text-sm">竹山 聖 氏（株式会社設計組織アモルフ 代表取締役（京都大学名誉教授）</p>
                             </div>
                         </div>
                     </div>
@@ -1854,9 +1911,18 @@
             }
         });
 
-        // EP.4視聴リンク（FMせんりサイマル放送へ）
+        // EP.5視聴リンク（FMせんりサイマル放送へ）
+        const ep5ListenBtn = document.getElementById('ep5-listen-btn');
+        const ep5LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+
+        // EP.5カードクリックで外部リンクを開く
+        ep5ListenBtn.addEventListener('click', () => {
+            window.open(ep5LinkUrl, '_blank', 'noopener,noreferrer');
+        });
+
+        // EP.4視聴リンク（Spotifyへ）
         const ep4ListenBtn = document.getElementById('ep4-listen-btn');
-        const ep4LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+        const ep4LinkUrl = 'https://open.spotify.com/episode/3cYRjluBJApx6c1PFKvpPI?si=6oZSkVowRUS-TOm7LP9_Uw';
 
         // EP.4カードクリックで外部リンクを開く
         ep4ListenBtn.addEventListener('click', () => {
