@@ -1,66 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- トップページ -->
   <url>
     <loc>https://kenchiku-tobira.com/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- エピソードを聴く -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#broadcast</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- 放送予定 -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#schedule</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- 建築と人をつなぐメディア（About） -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#about</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Follow Us -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#follow</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- 発信の5つの柱 -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#pillars</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- 協会について -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#association</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- お問い合わせ -->
-  <url>
-    <loc>https://kenchiku-tobira.com/#contact</loc>
-    <lastmod>2026-01-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
