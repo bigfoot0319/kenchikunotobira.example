@@ -1,0 +1,58 @@
+# Cloudflare Pages HTTPヘッダー設定
+# キャッシュ率改善のための設定
+
+# 画像ファイル - 1年間キャッシュ
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSSファイル - 1年間キャッシュ
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScriptファイル - 1年間キャッシュ
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# フォントファイル - 1年間キャッシュ
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ファビコン - 1ヶ月キャッシュ
+/favicon.ico
+  Cache-Control: public, max-age=2592000
+
+/favicon-16x16.png
+  Cache-Control: public, max-age=2592000
+
+/favicon-32x32.png
+  Cache-Control: public, max-age=2592000
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=2592000
+
+/android-chrome-192x192.png
+  Cache-Control: public, max-age=2592000
+
+/android-chrome-512x512.png
+  Cache-Control: public, max-age=2592000
+
+# Web App Manifest - 1週間キャッシュ
+/site.webmanifest
+  Cache-Control: public, max-age=604800
+
+# HTMLファイル - 1時間キャッシュ（コンテンツ更新に対応）
+/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/thankyou.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# robots.txt, sitemap.xml - 1日キャッシュ
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
