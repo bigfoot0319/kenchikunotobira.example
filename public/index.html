@@ -424,8 +424,52 @@
             <!-- エピソード（縦スクロール） -->
             <div class="flex flex-col gap-6">
 
-                <!-- EP.5 次回放送（強調表示） -->
-                <div id="ep5-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
+                <!-- EP.6 次回放送（強調表示） -->
+                <div id="ep6-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
+                    <!-- 左: 画像 -->
+                    <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
+                        <img src="/assets/images/episode6-kai.png"
+                             alt="甲斐みのり氏 収録風景"
+                             class="w-full h-full object-contain"
+                             loading="lazy" decoding="async">
+                        <!-- ホバーオーバーレイ（ラジオアイコン） -->
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 bg-[#FF6B35] rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.6</div>
+                    </div>
+                    <!-- 右: コンテンツ -->
+                    <div class="flex-1 p-4 md:p-5">
+                        <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">次回放送</span>
+                        <div class="text-[#FF6B35] text-sm font-bold mb-1">2月8日(日) 11:00〜</div>
+                        <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">「街は、こんなにも語りかけてくる」─ 甲斐みのりが見つめる、建築と記憶</h4>
+                        <div class="mb-2 space-y-0.5">
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 甲斐 みのり 氏<span class="text-primary-600 text-base font-bold ml-1">（エッセイスト）</span></p>
+                        </div>
+                        <p class="text-primary-500 text-sm leading-relaxed mb-3">旅先や日常で出会う街並みや建物を、やさしい言葉で綴り続けてきた甲斐みのり氏。ドラマ「名建築で昼食を」の監修を務め、東京建築祭や京都モダン建築祭では建築×食のツアーも開催。「建築が好きになると、街に出ること、旅をすることが本当に楽しくなる」と語る甲斐氏が、建築ファンを増やすための"推し活"と、街歩きの魅力を語ります。</p>
+                        <div class="flex items-center gap-4 text-primary-500 text-sm">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>55:00</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>2026.02.08</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EP.5 過去エピソード -->
+                <div id="ep5-listen-btn" class="flex flex-col md:flex-row md:items-center bg-white rounded-xl shadow-md overflow-hidden border border-primary-200 hover:shadow-xl cursor-pointer group transition-all">
                     <!-- 左: 画像 -->
                     <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
                         <img src="/assets/images/episode5-ueno.png"
@@ -440,15 +484,14 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.5</div>
+                        <div class="absolute top-2 left-2 bg-accent-500 text-white text-xs px-2 py-0.5 rounded font-medium">EP.5</div>
                     </div>
                     <!-- 右: コンテンツ -->
                     <div class="flex-1 p-4 md:p-5">
-                        <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">次回放送</span>
-                        <div class="text-[#FF6B35] text-sm font-bold mb-1">2月1日(日) 11:00〜</div>
+                        <div class="text-accent-500 text-sm font-bold mb-1">2月1日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">額に汗してまじめに働く人が報われる業界に</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 上野 浩也 氏<span class="text-primary-600 text-base font-bold ml-1">（一般社団法人 日本建築士事務所協会連合会 会長）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 上野 浩也 氏<span class="text-primary-600 text-base font-bold ml-1">（一般社団法人 日本建築士事務所協会連合会 会長）</span></p>
                         </div>
                         <p class="text-primary-500 text-sm leading-relaxed mb-3">京都を拠点に、景観規制の厳しい土地でクライアントや設計者の想いを実現する建築コンサルタントとして活躍してきた上野浩也氏。「建築は地図に残る仕事」と語る上野氏が、街に溶け込む建築のあり方、そして業界の未来への想いを語ります。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
@@ -859,41 +902,6 @@
             <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col gap-6">
-                    <!-- 6回 -->
-                    <div class="flex flex-col md:flex-row md:items-center bg-white rounded-xl shadow-md overflow-hidden border border-primary-200 hover:shadow-xl transition-all" data-aos="fade-up">
-                        <!-- 左: 画像 -->
-                        <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
-                            <img src="/assets/images/episode6-kai.png"
-                                 alt="甲斐みのり氏 収録風景"
-                                 class="w-full h-full object-contain"
-                                 loading="lazy" decoding="async">
-                            <div class="absolute top-2 left-2 bg-accent-500 text-white text-xs px-2 py-0.5 rounded font-medium">EP.6</div>
-                        </div>
-                        <!-- 右: コンテンツ -->
-                        <div class="flex-1 p-4 md:p-5">
-                            <div class="text-accent-500 text-sm font-bold mb-1">2月8日(日) 11:00〜 放送予定</div>
-                            <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">「街は、こんなにも語りかけてくる」─ 甲斐みのりが見つめる、建築と記憶</h4>
-                            <div class="mb-2 space-y-0.5">
-                                <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-600">●</span> 甲斐 みのり 氏<span class="text-primary-600 text-base font-bold ml-1">（エッセイスト）</span></p>
-                            </div>
-                            <p class="text-primary-500 text-sm leading-relaxed mb-3">旅先や日常で出会う街並みや建物を、やさしい言葉で綴り続けてきた甲斐みのり氏。ドラマ「名建築で昼食を」の監修を務め、東京建築祭や京都モダン建築祭では建築×食のツアーも開催。「建築が好きになると、街に出ること、旅をすることが本当に楽しくなる」と語る甲斐氏が、建築ファンを増やすための"推し活"と、街歩きの魅力を語ります。</p>
-                            <div class="flex items-center gap-4 text-primary-500 text-sm">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>55:00</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span>2026.02.08</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- 7回 -->
                     <div class="flex flex-col md:flex-row md:items-center bg-white rounded-xl shadow-md overflow-hidden border border-primary-200 hover:shadow-xl transition-all" data-aos="fade-up">
                         <!-- 左: 画像 -->
@@ -1917,9 +1925,18 @@
             }
         });
 
-        // EP.5視聴リンク（FMせんりサイマル放送へ）
+        // EP.6視聴リンク（FMせんりサイマル放送へ）
+        const ep6ListenBtn = document.getElementById('ep6-listen-btn');
+        const ep6LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+
+        // EP.6カードクリックで外部リンクを開く
+        ep6ListenBtn.addEventListener('click', () => {
+            window.open(ep6LinkUrl, '_blank', 'noopener,noreferrer');
+        });
+
+        // EP.5視聴リンク（Spotifyへ）
         const ep5ListenBtn = document.getElementById('ep5-listen-btn');
-        const ep5LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+        const ep5LinkUrl = 'https://open.spotify.com/episode/55yrRdaG24py7aSwzFZ5cT?si=pf2bQnKMT1-DW2qQD87C2A';
 
         // EP.5カードクリックで外部リンクを開く
         ep5ListenBtn.addEventListener('click', () => {
