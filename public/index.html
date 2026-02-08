@@ -945,14 +945,48 @@
             <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col gap-6">
-                    <!-- 放送予定がない場合のメッセージ -->
-                    <div class="bg-white rounded-xl shadow-md p-8 text-center border border-primary-200" data-aos="fade-up">
-                        <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
+                    <!-- EP.8 放送予定（強調表示） -->
+                    <div id="ep8-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);" data-aos="fade-up">
+                        <!-- 左: 画像 -->
+                        <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
+                            <img src="/assets/images/episode8-imai.png"
+                                 alt="今井公太郎氏 収録風景"
+                                 class="w-full h-full object-contain"
+                                 loading="lazy" decoding="async">
+                            <!-- ホバーオーバーレイ（ラジオアイコン） -->
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <div class="w-12 h-12 bg-[#FF6B35] rounded-full flex items-center justify-center shadow-lg">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.8</div>
                         </div>
-                        <p class="text-primary-600 text-lg">次回以降の放送予定は決まり次第お知らせします</p>
+                        <!-- 右: コンテンツ -->
+                        <div class="flex-1 p-4 md:p-5">
+                            <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">放送予定</span>
+                            <div class="text-[#FF6B35] text-sm font-bold mb-1">2月22日(日) 11:00〜</div>
+                            <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">「4人で2日で建つ家」</h4>
+                            <div class="mb-2 space-y-0.5">
+                                <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 今井 公太郎 氏<span class="text-primary-600 text-base font-bold ml-1">（東京大学生産技術研究所 教授）</span></p>
+                            </div>
+                            <p class="text-primary-500 text-sm leading-relaxed mb-3">4人で2日で建つ家——。3Dプリンターでアルミ合金のジョイントを製造し、誰でも組み立てられるセルフビルド住宅を開発する「PENTA」プロジェクト。世界的建築家・原広司氏に師事し、東大キャンパスの設計から次世代の住まいづくりまで、工学とデザインを融合させた革新的な試みで注目を集める今井公太郎氏が、デジタルテクノロジーが変える「住まいの未来」と、建築における「抽象化」の思考法を語ります。</p>
+                            <div class="flex items-center gap-4 text-primary-500 text-sm">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>2026.02.22</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -1942,6 +1976,17 @@
                 closeEp2Modal();
             }
         });
+
+        // EP.8視聴リンク（FMせんりサイマル放送へ）
+        const ep8ListenBtn = document.getElementById('ep8-listen-btn');
+        const ep8LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+
+        // EP.8カードクリックで外部リンクを開く
+        if (ep8ListenBtn) {
+            ep8ListenBtn.addEventListener('click', () => {
+                window.open(ep8LinkUrl, '_blank', 'noopener,noreferrer');
+            });
+        }
 
         // EP.7視聴リンク（FMせんりサイマル放送へ）
         const ep7ListenBtn = document.getElementById('ep7-listen-btn');
