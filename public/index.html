@@ -988,7 +988,41 @@
             <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col gap-6">
-                    <!-- 今後の放送予定はここに追加 -->
+                    <!-- EP.9 放送予定（強調表示） -->
+                    <div id="ep9-schedule-card" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);" data-aos="fade-up">
+                        <!-- 左: 画像 -->
+                        <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
+                            <img src="/assets/images/episode9-matsuoka.jpg"
+                                 alt="松岡恭子氏 収録風景"
+                                 class="w-full h-full object-contain"
+                                 loading="lazy" decoding="async">
+                            <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.9</div>
+                        </div>
+                        <!-- 右: コンテンツ -->
+                        <div class="flex-1 p-4 md:p-5">
+                            <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">放送予定</span>
+                            <div class="text-[#FF6B35] text-sm font-bold mb-1">3月1日(日) 11:00〜</div>
+                            <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">「街はみんなのもの 〜 福岡のアイデンティティと未来」</h4>
+                            <div class="mb-2 space-y-0.5">
+                                <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 松岡 恭子 氏<span class="text-primary-600 text-base font-bold ml-1">（建築家　株式会社スピングラス・アーキテクツ 代表取締役）</span></p>
+                            </div>
+                            <p class="text-primary-500 text-sm leading-relaxed mb-3">ニューヨークでキャリアを始め、台湾での設計・教育活動を経て、故郷・福岡を拠点に活躍する建築家・松岡恭子氏。建物だけでなく橋や公園など都市空間のデザインまで手がけ、天神・水上公園「SHIP'S GARDEN」や新北九州空港連絡橋など、街の風景を変える作品を生み出し続けています。不動産会社の経営者、NPO法人福岡建築ファウンデーション理事長としての顔も持つ松岡氏が、世界を見てきた目で語る「福岡の心地よさの正体」と、これからの街づくり。</p>
+                            <div class="flex items-center gap-4 text-primary-500 text-sm">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>2026.03.01</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
