@@ -424,12 +424,12 @@
             <!-- エピソード（縦スクロール） -->
             <div class="flex flex-col gap-6">
 
-                <!-- EP.10 次回放送（強調表示） -->
-                <div id="ep10-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
+                <!-- EP.11 次回放送（強調表示） -->
+                <div id="ep11-listen-btn" class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
                     <!-- 左: 画像 -->
                     <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
-                        <img src="/assets/images/episode10-kurakata.jpg"
-                             alt="倉方俊輔氏 スタジオ収録"
+                        <img src="/assets/images/episode11-osawa.jpg"
+                             alt="大澤研一氏 スタジオ収録"
                              class="w-full h-full object-contain"
                              loading="lazy" decoding="async">
                         <!-- ホバーオーバーレイ（ラジオアイコン） -->
@@ -440,17 +440,60 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.10</div>
+                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.11</div>
                     </div>
                     <!-- 右: コンテンツ -->
                     <div class="flex-1 p-4 md:p-5">
                         <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">次回放送</span>
-                        <div class="text-[#FF6B35] text-sm font-bold mb-1">3月8日(日) 11:00〜11:55</div>
+                        <div class="text-[#FF6B35] text-sm font-bold mb-1">3月15日(日) 11:00〜11:55</div>
+                        <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">大阪の「地層」を読む──歴史博物館から見た都市と建築の1400年</h4>
+                        <div class="mb-2 space-y-0.5">
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 大澤 研一 氏<span class="text-primary-600 text-base font-bold ml-1">（大阪歴史博物館 館長）</span></p>
+                        </div>
+                        <p class="text-primary-500 text-sm leading-relaxed mb-3">「難波宮から豊臣大坂城、そして近代へ」——大阪歴史博物館 館長・大澤研一さんをお迎えします。岩手出身の大澤さんが大阪に魅せられて40年以上。文献・絵図・出土遺物を手がかりに「都市としての大坂」を読み解いてきた歴史学者です。博物館は難波宮跡の真上に建ち、地下には実際の遺構が眠っています。私たちが歩くこの街の足元に刻まれた1400年の物語、たっぷり伺います。</p>
+                        <div class="flex items-center gap-4 text-primary-500 text-sm">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>55:00</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>2026.03.15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EP.10 過去エピソード -->
+                <div id="ep10-listen-btn" class="flex flex-col md:flex-row md:items-center bg-white rounded-xl shadow-md overflow-hidden border border-primary-200 hover:shadow-xl cursor-pointer group transition-all">
+                    <!-- 左: 画像 -->
+                    <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
+                        <img src="/assets/images/episode10-kurakata.jpg"
+                             alt="倉方俊輔氏 スタジオ収録"
+                             class="w-full h-full object-contain"
+                             loading="lazy" decoding="async">
+                        <!-- ホバーオーバーレイ（再生アイコン） -->
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-primary-700 text-white text-xs px-2 py-0.5 rounded font-medium">EP.10</div>
+                    </div>
+                    <!-- 右: コンテンツ -->
+                    <div class="flex-1 p-4 md:p-5">
+                        <div class="text-accent-600 text-sm font-bold mb-1">3月8日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">都市を「旅」する視点と、ひらかれる名建築の扉</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 倉方 俊輔 氏<span class="text-primary-600 text-base font-bold ml-1">（建築史家・大阪公立大学大学院教授）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-500">●</span> 倉方 俊輔 氏<span class="text-primary-600 text-base font-bold ml-1">（建築史家・大阪公立大学大学院教授）</span></p>
                         </div>
-                        <p class="text-primary-500 text-sm leading-relaxed mb-3">「普段入れない建築の扉が、週末の2日間だけ開く」——今年5月、東京で開催される「東京建築祭2026」の実行委員長・倉方俊輔さんをお迎えします。2025年には延べ11万人を動員したこのイベント。建築ファンはもちろん、ライトな気持ちで来てほしいと倉方さんは語ります。「楽しい、が先。その奥にいろんな発見がある」。街を歩くのが楽しくなる建築の見方、たっぷり伺います。<br><span class="text-[#FF6B35] font-medium">東京建築祭2026：5月16日（土）〜24日（日）、特別公開は5/23・24</span></p>
+                        <p class="text-primary-500 text-sm leading-relaxed mb-3">「普段入れない建築の扉が、週末の2日間だけ開く」——今年5月、東京で開催される「東京建築祭2026」の実行委員長・倉方俊輔さんをお迎えします。2025年には延べ11万人を動員したこのイベント。建築ファンはもちろん、ライトな気持ちで来てほしいと倉方さんは語ります。「楽しい、が先。その奥にいろんな発見がある」。街を歩くのが楽しくなる建築の見方、たっぷり伺います。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
                             <div class="flex items-center gap-1">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1074,42 +1117,6 @@
             <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col gap-6">
-                    <!-- EP.11 放送予定 -->
-                    <div class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35]" style="background-color: rgba(255, 107, 53, 0.08);" data-aos="fade-up">
-                        <!-- 左: 画像 -->
-                        <div class="relative w-full md:w-40 lg:w-48 h-48 md:h-40 lg:h-48 flex-shrink-0 bg-primary-100">
-                            <img src="/assets/images/episode11-osawa.jpg"
-                                 alt="大澤研一氏 スタジオ収録"
-                                 class="w-full h-full object-contain"
-                                 loading="lazy" decoding="async">
-                            <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.11</div>
-                        </div>
-                        <!-- 右: コンテンツ -->
-                        <div class="flex-1 p-4 md:p-5">
-                            <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">放送予定</span>
-                            <div class="text-[#FF6B35] text-sm font-bold mb-1">3月15日(日) 11:00〜11:55</div>
-                            <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">大阪の「地層」を読む──歴史博物館から見た都市と建築の1400年</h4>
-                            <div class="mb-2 space-y-0.5">
-                                <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 大澤 研一 氏<span class="text-primary-600 text-base font-bold ml-1">（大阪歴史博物館 館長）</span></p>
-                            </div>
-                            <p class="text-primary-500 text-sm leading-relaxed mb-3">「難波宮から豊臣大坂城、そして近代へ」——大阪歴史博物館 館長・大澤研一さんをお迎えします。岩手出身の大澤さんが大阪に魅せられて40年以上。文献・絵図・出土遺物を手がかりに「都市としての大坂」を読み解いてきた歴史学者です。博物館は難波宮跡の真上に建ち、地下には実際の遺構が眠っています。私たちが歩くこの街の足元に刻まれた1400年の物語、たっぷり伺います。</p>
-                            <div class="flex items-center gap-4 text-primary-500 text-sm">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>55:00</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span>2026.03.15</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- EP.12 放送予定 -->
                     <div class="flex flex-col md:flex-row md:items-center rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35]" style="background-color: rgba(255, 107, 53, 0.08);" data-aos="fade-up">
                         <!-- 左: 画像 -->
@@ -2144,10 +2151,19 @@
             }
         });
 
-        // EP.9視聴リンク（FMせんりサイマル放送へ）
-        // EP.10視聴リンク（JCBAサイマルラジオへ）
+        // EP.11視聴リンク（JCBAサイマルラジオへ）
+        const ep11ListenBtn = document.getElementById('ep11-listen-btn');
+        const ep11LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+
+        if (ep11ListenBtn) {
+            ep11ListenBtn.addEventListener('click', () => {
+                window.open(ep11LinkUrl, '_blank', 'noopener,noreferrer');
+            });
+        }
+
+        // EP.10視聴リンク（Spotifyへ）
         const ep10ListenBtn = document.getElementById('ep10-listen-btn');
-        const ep10LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+        const ep10LinkUrl = 'https://open.spotify.com/episode/1kfp7DN0fALWf35uXloSQQ?si=7F2qCEyQSe-UUNRGIyNebg';
 
         if (ep10ListenBtn) {
             ep10ListenBtn.addEventListener('click', () => {
