@@ -430,12 +430,12 @@
             <!-- エピソード（縦スクロール） -->
             <div class="flex flex-col gap-6">
 
-                <!-- EP.22 次回放送（強調表示） -->
-                <div id="ep22-listen-btn" class="flex flex-col rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
+                <!-- EP.23 次回放送（強調表示） -->
+                <div id="ep23-listen-btn" class="flex flex-col rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35] hover:shadow-lg cursor-pointer group transition-all" style="background-color: rgba(255, 107, 53, 0.08);">
                     <!-- 左: 画像 -->
                     <div class="relative w-full h-44 md:h-56 lg:h-64 flex-shrink-0 bg-primary-100">
-                        <img src="/assets/images/episode22-fukuda.png"
-                             alt="福田知弘氏 スタジオ収録"
+                        <img src="/assets/images/episode23-matsutomi.jpg"
+                             alt="松富謙一氏 スタジオ収録"
                              class="w-full h-full object-contain"
                              loading="lazy" decoding="async">
                         <!-- ホバーオーバーレイ（ラジオアイコン） -->
@@ -446,15 +446,58 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.22</div>
+                        <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.23</div>
                     </div>
                     <!-- 右: コンテンツ -->
                     <div class="flex-1 p-4 md:p-5">
                         <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">次回放送</span>
-                        <div class="text-[#FF6B35] text-sm font-bold mb-1">5月31日(日) 11:00〜11:55</div>
+                        <div class="text-[#FF6B35] text-sm font-bold mb-1">6月7日(日) 11:00〜11:55</div>
+                        <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">街を再生する建築家——空き家から、キーウへ</h4>
+                        <div class="mb-2 space-y-0.5">
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 松富 謙一 氏<span class="text-primary-600 text-base font-bold ml-1">（CASEまちづくり研究所 代表／一級建築士）</span></p>
+                        </div>
+                        <p class="text-primary-500 text-sm leading-relaxed mb-3">「建築士の仕事は、建物という箱をつくることでしょうか？」。松富さんの活動の起点は、大阪・空堀（からほり）の長屋再生プロジェクト。歴史ある木造の街並みを空き家のまま終わらせない——その思いは、台湾・韓国・中国東北地方の歴史的建築を巡る国際交流へと広がります。さらに阪神・淡路、東北・気仙沼の復興現場で「コミュニティを交えた街の再生」を積み重ね、2025年夏、戦時下のキーウへ。爆撃された街で、日本の建築士が培ってきた「街と暮らしを再生する知恵」を、どう次世代へ継いでいくのか。空き家再生から復興支援まで、一本の道のりをじっくり伺います。</p>
+                        <div class="flex items-center gap-4 text-primary-500 text-sm">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span>55:00</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                </svg>
+                                <span>2026.06.07</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EP.22 過去エピソード -->
+                <div id="ep22-listen-btn" class="flex flex-col bg-white rounded-xl shadow-md overflow-hidden border border-primary-200 hover:shadow-xl cursor-pointer group transition-all">
+                    <!-- 左: 画像 -->
+                    <div class="relative w-full h-44 md:h-56 lg:h-64 flex-shrink-0 bg-primary-100">
+                        <img src="/assets/images/episode22-fukuda.png"
+                             alt="福田知弘氏 スタジオ収録"
+                             class="w-full h-full object-contain"
+                             loading="lazy" decoding="async">
+                        <!-- ホバーオーバーレイ（再生アイコン） -->
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="absolute top-2 left-2 bg-primary-700 text-white text-xs px-2 py-0.5 rounded font-medium">EP.22</div>
+                    </div>
+                    <!-- 右: コンテンツ -->
+                    <div class="flex-1 p-4 md:p-5">
+                        <div class="text-accent-600 text-sm font-bold mb-1">5月31日(日) 11:00〜</div>
                         <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">デジタルが拓く建築の未来——VR・AI・メタバースで変わる"まちづくり"</h4>
                         <div class="mb-2 space-y-0.5">
-                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 福田 知弘 氏<span class="text-primary-600 text-base font-bold ml-1">（大阪大学 大学院工学研究科 環境エネルギー工学専攻 教授）</span></p>
+                            <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-accent-500">●</span> 福田 知弘 氏<span class="text-primary-600 text-base font-bold ml-1">（大阪大学 大学院工学研究科 環境エネルギー工学専攻 教授）</span></p>
                         </div>
                         <p class="text-primary-500 text-sm leading-relaxed mb-3">VRで「幻の安土城」をよみがえらせ、水木しげるロードのリニューアルではVR監修を担当し、チームで照明学会最優秀賞を受賞——。パナソニックでVRの産業化に携わった企業時代を経て、大学で「デジタル×まちづくり」の最前線を切り拓いてきた福田知弘先生をお迎えします。県知事と市長がVRを見た瞬間、その場で設計の見直しが決まった——技術が人を動かしたエピソード。AR浸水シミュレーションが拓く新しい防災のかたち、AIが間取りを提案する時代の建築設計、そして"建築版メタバース"の現在地。形ではなく「流れ」として空間を捉え直す眼差しから、デジタルと建築が交わる未来への扉を開きます。</p>
                         <div class="flex items-center gap-4 text-primary-500 text-sm">
@@ -1397,41 +1440,7 @@
             <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col gap-6">
-                    <!-- EP.23 放送予定 -->
-                    <div class="flex flex-col rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35]" style="background-color: rgba(255, 107, 53, 0.08);" data-aos="fade-up">
-                        <!-- 左: 画像 -->
-                        <div class="relative w-full h-64 md:h-80 lg:h-96 flex-shrink-0 bg-primary-100">
-                            <img src="/assets/images/episode23-matsutomi.jpg"
-                                 alt="EP23 ゲスト 松富謙一氏"
-                                 class="w-full h-full object-contain"
-                                 loading="lazy" decoding="async">
-                            <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.23</div>
-                        </div>
-                        <!-- 右: コンテンツ -->
-                        <div class="flex-1 p-4 md:p-5">
-                            <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">放送予定</span>
-                            <div class="text-[#FF6B35] text-sm font-bold mb-1">6月7日(日) 11:00〜11:55</div>
-                            <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">街を再生する建築家——空き家から、キーウへ</h4>
-                            <div class="mb-2 space-y-0.5">
-                                <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 松富 謙一 氏<span class="text-primary-600 text-base font-bold ml-1">（CASEまちづくり研究所 代表／一級建築士）</span></p>
-                            </div>
-                            <p class="text-primary-500 text-sm leading-relaxed mb-3">「建築士の仕事は、建物という箱をつくることでしょうか？」。松富さんの活動の起点は、大阪・空堀（からほり）の長屋再生プロジェクト。歴史ある木造の街並みを空き家のまま終わらせない——その思いは、台湾・韓国・中国東北地方の歴史的建築を巡る国際交流へと広がります。さらに阪神・淡路、東北・気仙沼の復興現場で「コミュニティを交えた街の再生」を積み重ね、2025年夏、戦時下のキーウへ。爆撃された街で、日本の建築士が培ってきた「街と暮らしを再生する知恵」を、どう次世代へ継いでいくのか。空き家再生から復興支援まで、一本の道のりをじっくり伺います。</p>
-                            <div class="flex items-center gap-4 text-primary-500 text-sm">
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>55:00</span>
-                                </div>
-                                <div class="flex items-center gap-1">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <span>2026.06.07</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- 放送予定エピソードはありません -->
                 </div>
             </div>
 
@@ -2629,6 +2638,16 @@
                 closeEp2Modal();
             }
         });
+
+        // EP.23視聴リンク（JCBAサイマルラジオへ）
+        const ep23ListenBtn = document.getElementById('ep23-listen-btn');
+        const ep23LinkUrl = 'https://www.jcbasimul.com/fmsenri';
+
+        if (ep23ListenBtn) {
+            ep23ListenBtn.addEventListener('click', () => {
+                window.open(ep23LinkUrl, '_blank', 'noopener,noreferrer');
+            });
+        }
 
         // EP.22視聴リンク（JCBAサイマルラジオへ）
         const ep22ListenBtn = document.getElementById('ep22-listen-btn');
