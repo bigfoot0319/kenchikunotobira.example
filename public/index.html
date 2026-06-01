@@ -1397,7 +1397,41 @@
             <!-- 放送予定リスト -->
             <div class="max-w-4xl mx-auto">
                 <div class="flex flex-col gap-6">
-                    <!-- 放送予定エピソードはありません -->
+                    <!-- EP.23 放送予定 -->
+                    <div class="flex flex-col rounded-xl shadow-md overflow-hidden border-l-4 border-[#FF6B35]" style="background-color: rgba(255, 107, 53, 0.08);" data-aos="fade-up">
+                        <!-- 左: 画像 -->
+                        <div class="relative w-full h-64 md:h-80 lg:h-96 flex-shrink-0 bg-primary-100">
+                            <img src="/assets/images/episode23-matsutomi.jpg"
+                                 alt="EP23 ゲスト 松富謙一氏"
+                                 class="w-full h-full object-contain"
+                                 loading="lazy" decoding="async">
+                            <div class="absolute top-2 left-2 bg-[#FF6B35] text-white text-xs px-2 py-0.5 rounded font-medium">EP.23</div>
+                        </div>
+                        <!-- 右: コンテンツ -->
+                        <div class="flex-1 p-4 md:p-5">
+                            <span class="inline-block px-3 py-1 text-xs font-bold text-white bg-[#FF6B35] rounded-full mb-2">放送予定</span>
+                            <div class="text-[#FF6B35] text-sm font-bold mb-1">6月7日(日) 11:00〜11:55</div>
+                            <h4 class="font-bold text-primary-800 text-base md:text-lg mb-2">街を再生する建築家——空き家から、キーウへ</h4>
+                            <div class="mb-2 space-y-0.5">
+                                <p class="text-primary-800 text-base md:text-lg font-bold"><span class="text-[#FF6B35]">●</span> 松富 謙一 氏<span class="text-primary-600 text-base font-bold ml-1">（CASEまちづくり研究所 代表／一級建築士）</span></p>
+                            </div>
+                            <p class="text-primary-500 text-sm leading-relaxed mb-3">「建築士の仕事は、建物という箱をつくることでしょうか？」。松富さんの活動の起点は、大阪・空堀（からほり）の長屋再生プロジェクト。歴史ある木造の街並みを空き家のまま終わらせない——その思いは、台湾・韓国・中国東北地方の歴史的建築を巡る国際交流へと広がります。さらに阪神・淡路、東北・気仙沼の復興現場で「コミュニティを交えた街の再生」を積み重ね、2025年夏、戦時下のキーウへ。爆撃された街で、日本の建築士が培ってきた「街と暮らしを再生する知恵」を、どう次世代へ継いでいくのか。空き家再生から復興支援まで、一本の道のりをじっくり伺います。</p>
+                            <div class="flex items-center gap-4 text-primary-500 text-sm">
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>55:00</span>
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <span>2026.06.07</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -2843,6 +2877,24 @@
                     "@type": "Organization",
                     "name": "一般社団法人 大阪府建築士事務所協会"
                 }
+            },
+            {
+                "@type": "RadioEpisode",
+                "@id": "https://kenchiku-tobira.com/#episode-23",
+                "episodeNumber": "23",
+                "name": "街を再生する建築家——空き家から、キーウへ",
+                "datePublished": "2026-06-07",
+                "duration": "PT55M",
+                "description": "「建築士の仕事は、建物という箱をつくることでしょうか？」。松富さんの活動の起点は、大阪・空堀（からほり）の長屋再生プロジェクト。歴史ある木造の街並みを空き家のまま終わらせない——その思いは、台湾・韓国・中国東北地方の歴史的建築を巡る国際交流へと広がります。さらに阪神・淡路、東北・気仙沼の復興現場で「コミュニティを交えた街の再生」を積み重ね、2025年夏、戦時下のキーウへ。爆撃された街で、日本の建築士が培ってきた「街と暮らしを再生する知恵」を、どう次世代へ継いでいくのか。空き家再生から復興支援まで、一本の道のりをじっくり伺います。",
+                "actor": {
+                    "@type": "Person",
+                    "name": "松富 謙一",
+                    "jobTitle": "CASEまちづくり研究所 代表／一級建築士"
+                },
+                "partOfSeries": {
+                    "@id": "https://kenchiku-tobira.com/#radioseries"
+                },
+                "inLanguage": "ja"
             }
         ]
     }
